@@ -1,0 +1,34 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    margin-top: 5em;
+    width: 7em;
+    height: auto;
+}
+
+#flugzeug_img {
+    margin-top: 2em;
+    width: min(70em, 50vw);
+    height: auto;
+}
+
+main p {
+    text-align: center;
+    white-space: wrap;
+    width: min(70em, 60vw);
+}
+
+main h2 {
+    margin-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+    white-space: break-spaces;
+}

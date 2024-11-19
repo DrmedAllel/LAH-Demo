@@ -1,0 +1,217 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+:root {
+    --primary-color: #232323;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --background-color: #ffffff;
+    --card-color: #E7E7E7;
+    --text-color: #242424;
+    --confirm-color: #05ff6dac;
+}
+
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--text-color);
+}
+
+header h1 {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+header h1 a {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0;
+}
+
+header p {
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    gap: min(6em, 5vw);
+    width: auto;
+    background-color: var(--card-color);
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.05);
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 2em;
+    margin-top: 0.75em;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dropdown .title {
+    background-color: var(--card-color);
+    border: none;
+    cursor: pointer;
+    font-size: min(1.5em, 1.4vw);
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown:hover {
+    text-decoration: underline;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    top: 70%;
+    background-color: var(--card-color);
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.05);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+
+.submenu a {
+    display: block;
+    text-align: center;
+    font-size: min(1.3em, 1.2vw);
+    font-weight: 500;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.25;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 0.5em;
+    white-space: nowrap;
+}
+
+
+.submenu a:hover {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+main {
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+footer p, footer a {
+    color: var(--text-color);
+    font-size: 1em;
+    font-weight: 300;
+    text-decoration: none;
+    margin: 20;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.spacer{
+    height: 10em;
+}
+
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--card-color);
+    opacity: 0.8;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 10em;
+}
+
+.cookie-banner p {
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.cookie-banner button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.cookie-banner button:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.wiggle {
+    animation: wiggle 0.3s ease-in-out;
+}

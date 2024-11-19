@@ -1,0 +1,85 @@
+main {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 2em;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30em;
+    margin-bottom: 1em;
+    gap: 1em;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(60em, 60%);
+}
+
+form #items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+#div_add_remove_buttons button {
+    width: 2em;
+    height: 2em;
+}
+
+#zip, #housenumber {
+    width: 5em;
+}
+
+#city, #street {
+    width: 15em;
+}
+
+#name, #prename, #email, #country {
+    width: 21em;
+}
+
+#country_div {
+    margin-bottom: 6em;
+}
+
+#error-message-bigger10 {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+}
+
+#submit{
+    margin-top: 5em;
+}
+
+input, button, #comments {
+    background-color: var(--card-color);
+    border: 1px solid var(--text-color);
+    border-radius: 0.5em;
+}
+
+#comment-group {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#comments {
+    width: 30em;
+    height: 10em;
+}

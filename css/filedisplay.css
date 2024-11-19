@@ -1,0 +1,24 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main object {
+    margin-top: 5em;
+    width: 25vw;
+    height: 70vh;
+}
+
+main object p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+main {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(60em, 60%);
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--card-color);
+    font-size: 1em;
+}
+
+a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}

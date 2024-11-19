@@ -1,0 +1,116 @@
+main {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(60em, 60%);
+}
+
+#order_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0em;
+    margin-bottom: 5em;
+}
+
+.manufacturer_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 5em;
+}
+
+.manufacturer_title h2{
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.manufacturer_title img{
+    width: auto;
+    height: 4em;
+}
+
+.item{
+    border: 1px solid var(--text-color);
+    padding: 1em;
+    border-radius: 1em;
+    margin-bottom: 2em;
+    width: min(60em, 60%);
+}
+
+.item_header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item_title{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.item-number{
+    font-size: 1em;
+    font-weight: 700;
+    color: blue;
+}
+
+.item_images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.item_images img{
+    width: auto;
+    height: min(10em, 15vw);
+}
+
+.add-to-cart{
+    background-color: var(--card-color);
+    color: var(--text-color);
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.7em;
+    cursor: pointer;
+}
+
+.add-to-cart:hover{
+    background-color: var(--confirm-color);
+}
+
+.remove-from-cart{
+    background-color: var(--confirm-color);
+}
+
+.shopping_cart{
+    display: none;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    border: 1px solid var(--card-color);
+    position: fixed;
+    bottom: 3%;
+    right: 15%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 5em;
+}
+
+.shopping_cart img{
+    width: auto;
+    height: 4em;
+    padding: 1em;
+}
