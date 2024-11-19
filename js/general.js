@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
     if (header) {
         header.innerHTML = `
-          <h1><a href="index.html" title="Startseite">Luftfahrt-Archiv Hafner</a></h1>
+          <h1><a href="/index.html" title="Startseite">Luftfahrt-Archiv Hafner</a></h1>
           <p>1990-2024</p>
           <nav>
             <div class="dropdown">

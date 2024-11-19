@@ -15,7 +15,6 @@ async function handleSubmit(event) {
     };
 
     // Sammle Warenkorb-Items
-    const cartItems = [];
     const cartElement = document.querySelector('.cart');
     const items = cartElement.getElementsByClassName('cart-item');
     Array.from(items).forEach((item, index) => {
