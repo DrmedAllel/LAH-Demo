@@ -2,50 +2,50 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
     if (header) {
         header.innerHTML = `
-          <h1><a href="/index.html" title="Startseite">Luftfahrt-Archiv Hafner</a></h1>
+          <h1><a href="/LAH-Demo/index.html" title="Startseite">Luftfahrt-Archiv Hafner</a></h1>
           <p>1990-2024</p>
           <nav>
             <div class="dropdown">
             <h2 class="title">Flugzeuge</h2>
             <ul class="submenu">
-              <a href="/Flugzeuge/arado.html">Arado</a>
-              <a href="/Flugzeuge/ago.html">AGO</a>
-              <a href="/Flugzeuge/blohm_voss.html">Blohm & Voss</a>
-              <a href="/Flugzeuge/bücker.html">Bücker</a>
-              <a href="/Flugzeuge/dfs.html">DFS</a>
-              <a href="/Flugzeuge/dornier.html">Dornier</a>
-              <a href="/Flugzeuge/erla.html">Erla</a>
-              <a href="/Flugzeuge/fieseler.html">Fieseler</a>
-              <a href="/Flugzeuge/focke-achgelis.html">Focke-Achgelis</a>
-              <a href="/Flugzeuge/focke_wulf.html">Focke Wulf</a>
-              <a href="/Flugzeuge/gotha.html">Gotha</a>
-              <a href="/Flugzeuge/heinkel.html">Heinkel</a>
-              <a href="/Flugzeuge/henschel.html">Henschel</a>
-              <a href="/Flugzeuge/junkers.html">Junkers</a>
-              <a href="/Flugzeuge/klemm.html">Klemm</a>
-              <a href="/Flugzeuge/messerschmitt.html">Messerschmitt</a>
-              <a href="/Flugzeuge/segelflugzeuge.html">Segelflugzeuge</a>
-              <a href="/Flugzeuge/siebel.html">Siebel</a>
+              <a href="/LAH-Demo/Flugzeuge/arado.html">Arado</a>
+              <a href="/LAH-Demo/Flugzeuge/ago.html">AGO</a>
+              <a href="/LAH-Demo/Flugzeuge/blohm_voss.html">Blohm & Voss</a>
+              <a href="/LAH-Demo/Flugzeuge/bücker.html">Bücker</a>
+              <a href="/LAH-Demo/Flugzeuge/dfs.html">DFS</a>
+              <a href="/LAH-Demo/Flugzeuge/dornier.html">Dornier</a>
+              <a href="/LAH-Demo/Flugzeuge/erla.html">Erla</a>
+              <a href="/LAH-Demo/Flugzeuge/fieseler.html">Fieseler</a>
+              <a href="/LAH-Demo/Flugzeuge/focke-achgelis.html">Focke-Achgelis</a>
+              <a href="/LAH-Demo/Flugzeuge/focke_wulf.html">Focke Wulf</a>
+              <a href="/LAH-Demo/Flugzeuge/gotha.html">Gotha</a>
+              <a href="/LAH-Demo/Flugzeuge/heinkel.html">Heinkel</a>
+              <a href="/LAH-Demo/Flugzeuge/henschel.html">Henschel</a>
+              <a href="/LAH-Demo/Flugzeuge/junkers.html">Junkers</a>
+              <a href="/LAH-Demo/Flugzeuge/klemm.html">Klemm</a>
+              <a href="/LAH-Demo/Flugzeuge/messerschmitt.html">Messerschmitt</a>
+              <a href="/LAH-Demo/Flugzeuge/segelflugzeuge.html">Segelflugzeuge</a>
+              <a href="/LAH-Demo/Flugzeuge/siebel.html">Siebel</a>
             </ul>
             </div>
 
             <div class="dropdown">
             <h2 class="title">Motoren & Luftschrauben</h2>
             <ul class="submenu">
-              <a href="/Motoren/argus.html">Argus</a>
-              <a href="/Motoren/bmw.html">BMW</a>
-              <a href="/Motoren/daimler_benz.html">Daimler Benz</a>
-              <a href="/Motoren/gnome_rhone.html">Gnome Rhone</a>
-              <a href="/Motoren/hirth.html">Hirth</a>
-              <a href="/Motoren/jumo.html">JUMO</a>
-              <a href="/Motoren/oberursel.html">Oberursel</a>
-              <a href="/Motoren/salmson.html">Salmson</a>
-              <a href="/Motoren/siemens_bramo.html">Siemens - BRAMO</a>
-              <a href="/Motoren/vdm.html">VDM</a>
-              <a href="/Motoren/vergaser_einspritzanlagen.html">Vergaser und Einspritzanlagen</a>
-              <a href="/Motoren/walter_motoren.html">Walter Motoren</a>
-              <a href="/Motoren/walter_hwk.html">Walter HWK</a>
-              <a href="/Motoren/zuendapp.html">Zuendapp</a>
+              <a href="/LAH-Demo/Motoren/argus.html">Argus</a>
+              <a href="/LAH-Demo/Motoren/bmw.html">BMW</a>
+              <a href="/LAH-Demo/Motoren/daimler_benz.html">Daimler Benz</a>
+              <a href="/LAH-Demo/Motoren/gnome_rhone.html">Gnome Rhone</a>
+              <a href="/LAH-Demo/Motoren/hirth.html">Hirth</a>
+              <a href="/LAH-Demo/Motoren/jumo.html">JUMO</a>
+              <a href="/LAH-Demo/Motoren/oberursel.html">Oberursel</a>
+              <a href="/LAH-Demo/Motoren/salmson.html">Salmson</a>
+              <a href="/LAH-Demo/Motoren/siemens_bramo.html">Siemens - BRAMO</a>
+              <a href="/LAH-Demo/Motoren/vdm.html">VDM</a>
+              <a href="/LAH-Demo/Motoren/vergaser_einspritzanlagen.html">Vergaser und Einspritzanlagen</a>
+              <a href="/LAH-Demo/Motoren/walter_motoren.html">Walter Motoren</a>
+              <a href="/LAH-Demo/Motoren/walter_hwk.html">Walter HWK</a>
+              <a href="/LAH-Demo/Motoren/zuendapp.html">Zuendapp</a>
             </ul>
             </div>
 
