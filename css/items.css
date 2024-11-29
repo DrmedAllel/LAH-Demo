@@ -28,6 +28,10 @@ main {
     height: 1em;
 }
 
+.page_title{
+    text-align: center;
+}
+
 .manufacturer_title{
     display: flex;
     flex-direction: row;

@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <a href="/LAH-Demo/Motoren_Luftschrauben/siemens_bramo.html">Siemens - BRAMO</a>
               <a href="/LAH-Demo/Motoren_Luftschrauben/vdm.html">VDM</a>
               <a href="/LAH-Demo/Motoren_Luftschrauben/vergaser_einspritzanlagen.html">Vergaser und Einspritzanlagen</a>
-              <a href="/LAH-Demo/Motoren_Luftschrauben/walter_motoren.html">Walter Motoren</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/walter.html">Walter Motoren</a>
               <a href="/LAH-Demo/Motoren_Luftschrauben/walter_hwk.html">Walter HWK</a>
               <a href="/LAH-Demo/Motoren_Luftschrauben/zuendapp.html">Zuendapp</a>
             </ul>
