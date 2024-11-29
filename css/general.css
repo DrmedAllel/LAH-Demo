@@ -66,7 +66,7 @@ header nav {
     width: auto;
     background-color: var(--background-color);
     border: 1px solid var(--card-color);
-    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding-left: 2em;
     padding-right: 2em;
     border-radius: 2em;
@@ -105,7 +105,7 @@ header nav {
     top: 70%;
     background-color: var(--background-color);
     border: 1px solid var(--card-color);
-    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 1em;
     padding: 1em;
 }
