@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const footer = document.querySelector('footer');
     if (footer) {
         footer.innerHTML = `
-    <p>Luftfahrt-Archiv Hafner, Udo Hafner, 1990-2024</p>
+    <p>Luftfahrt-Archiv Hafner, Udo Hafner, gegr. 1990</p>
     <a href="agb.html">AGB</a> 
     <a href="links.html">Links</a> 
     <a href="about.html">Wir über uns</a>
