@@ -1,18 +1,134 @@
 Lege die folgenden Items korrekt an. Beachte dabei, dass ein neuer Ordner für jedes Item angelegt wird und die Nummerierung der Bilddateien von item zu item steigt. Orientiere dich am vorangegangenen Item. Jedes Item besitzt dabei 4 Bilder:
 
-
+DVD
+1,35 GB
+JUMO 211
+Kompendium, gesamt 4.030 Seiten, bestehend aus:
+ 
+JUMO 211 A BR 1, Betriebsanweisung, Wartungsvorschrift, Teil 1, 1938
+JUMO 211 A BR 1 u. 3, Beschreibung, Teilüberholungsanleitung, Teil 2, 1940
+JUMO 211 A bis F, Außensicherungen, Farbkennzeichnungen, 1944
+JUMO 211 B u. D, Betr.-Anweisung u. Wartungsvorschrift, 1940
+JUMO 211 B-D u. G-H, Einspritzanlage, Beschreibung und Durchsichtbilder, 1941
+JUMO 211 B-D u. G-H, Vorläufige Teilueberholungsanleitung,1941
+JUMO 211 B-D, G-H u. F-J, Ladedruckregler, Geräte-Handbuch, 1942
+JUMO 211 B-H, Lehrtafeln, 1941
+JUMO 211 F und J, Motoren-Handbuch, Werksausgabe, 1941
+JUMO 211 F und J, Ersatzteilliste, Werksausgabe, 1942
+JUMO 211 F und J, Ersatzteilliste, Werksausgabe, 1943
+JUMO 211 F und J, Lehrtafeln, 1941
+JUMO 211 F und J, Sicherungsplan, Außensicherungen, 1943
+JUMO 211 F und J, N und P, Gesamt-Durchführungsplan und Modernisierungsliste, 1944
+JUMO 211 F und J, Baureihe 2, Neuerungen gegenüber Baureihe 1, 1942
+JUMO 211 F und J, Baureihe 1, Passungen und Abmaße, 1941
+JUMO 211 F und J, Baureihe 2, Passungen und Abmaße, 1942
+JUMO 211 F und J, Baureihe 1, Vorläufige Teilüberholung, 1942
+JUMO 211 F und J, Baureihe 1 u.2, Bilderliste der Werkzeuge und Vorrichtungen, 1943
+JUMO 211 F und J, Geräte-Handbuch Einspritzanlage, D(Luft)T 3471, 1942
+JUMO 211 F und J, Arbeitsblätter für Flugmotorenschlosser und Flugzeugwarte, 1943
+JUMO 211 G u. H, Ersatzteilliste, 1940
+JUMO 211 Lehrblätter für Monteurschulung, 1941
+Junkers Einspritzgerät 9021 A-3, Ersatzteilliste, 1943
+Junkers, Ersatzteile für die elektrische Ausrüstung von Junkers Flugmotoren, 1942
+Junkers Kraftstoff-Zahnradpumpe 9-2135 A-3, A-4, Änderungs-Durchführungsplan, 1944
+Junkers Ladedruckregler 9-2243 A-1-3, Änderungs-Durchführungsplan, 1944
+Junkers Normen, Triebwerks-Bediengestänge, 1941
+Junkers Luftschrauben-Regleranlage 9-9508 C-2 und 9-9531 E-1, Ersatzteilliste, 1941
+ 
+JUMO 211 B-H Lehrtafeln ListenbilderJUMO%20211%20B%20uJUMO%20211%20B-H%20Lehrtafeln%20Listenbilder%20(2)JUMO%20211%20F%20u%20J%20ETL%20Listenbild%20(2)
+ 
+Bestell-Nr.: LAH-1017-1
+ 
+ 
+ 
+ 
+49,00 €
+CD-Bild-2
  
 DVD
-90 MB
-Gnôme-Rhône GR 14 N
-Particularites des moteurs a compression 6,8, Orig.-Ausgabe frz., 1939, 360 Seiten.
-Verwendung u.a. bei Messerschmitt Me 323 D.
+167 MB
+JUMO 213
+Kompendium, gesamt890Seiten, bestehend aus:
  
+JUMO 213 A-0, Motoren-Handbuch, 1942
+JUMO 213 A-1, C-0 Motoren-Handbuch,1943
+JUMO 213 A,Ersatzteilliste,1944
+JUMO 213 A-1, Motorbediengetriebe, 1942
+JUMO 213 A-1 Motorenkarte, 1944
+JUMO 213 A-1 und C-0, Überholungsanleitung, 1944
+JUMO 213 A-1, Wartungsarbeiten, 1943
+JUMO 213 A-1,Handbuch für das Einheitstriebwerk, 8-1013 A-1, 1943
+Junkers Verstell-Luftschraube VS 111 am JUMO 213 A-1, Handbuch,1944
+Junkers Flugmotoren-ETL-Elektr. Ausrüstung, 1942
+JUMO 213 Kreisläufe, 1943
+ 
+JUMO 213 ETL LiBiJUMO%20213%20A-1%20HB%20LiBi%20(2)JUMO%20213%20A-1%20HB%20LiBi%20(4)JUMO%20213%20Ueberhol-Anl-LiBi%20(3)
+ 
+Bestell-Nr.: LAH-1016-1
+ 
+ 
+ 
+ 
+49,00 €
 
+CD-Bild-2
  
-Bestell-Nr.: LAH-514
+DVD
+403 MB
+JUMO 004
+Kompendium,gesamt 485 Seiten, bestehend aus:
+ 
+JUMO 004 B-1, Triebwerk-Handbuch, Auszug aus D(Luft)T.g.3004, 1945
+JUMO 004 B-1, Ersatzteilliste, 1944
+JUMO 004 B-1 und B-4 Einbaumappe, 1945
+JUMO 004 B-1, Kurzbetriebsanweisung, 1944
+JUMO 004 B, Kleintafeln, 1944
+JUMO 004 B-1 in der Me 262, JFM Lehrmittel, 1944
+JUMO 004 B-1, Lehrbildreihe, 1944
+Riedel-Anlasser, Technische Unterlagen,1943
+ 
+JUMO%20004%20Kleintafeln-LiBiJUMO%20004%20HB%20LiBi-a%20(2)JUMO%20004%20Kleintafeln-LiBi%20(2)JUMO%20004%20Bedienung%20in%20Me%20262-LiBi%20(2)
+ 
+Bestell-Nr.: LAH-1032-1
  
  
  
  
-29,00 €
+39,00 €
+
+CD-Bild-2
+ 
+DVD
+568 MB
+Junkers Verstell-Luftschrauben
+Kompendium, gesamt 1.228 Seiten, bestehend aus:
+ 
+Junkers VS 5, Verstell-Luftschraube, Handbuch, 1939
+Junkers VS 5, Verstell-Luftschraube Ausführung VS 5, Handbuch, 1940
+Junkers VS 5, Verstell-Luftschraube, Lehrbildreihe, 1941
+Junkers VS 9, Verstell-Luftschraube Bauart VS 9, 1944
+Junkers VS 11, Verstell-Luftschrauben-Anlage am JUMO 211 F und J, 1941
+Junkers VS 11, Verstell-Luftschrauben-Anlage am JUMO 211 F und J,1943
+Junkers VS 11, Ersatzteilliste, 1941
+Junkers VS 11, Baureihe 3, Ersatzteilliste, 1943
+Junkers VS 11, Baureihe 6, Ersatzteilliste, 1943
+Junkers VS 11, Baureihe 6 mit Drehzahlregler, 1942
+Junkers VS 111, Geräte-Handbuch, 1944
+Junkers VS 111, Luftschraubenanlage-Karte, 1943
+Junkers VLS, Bauart Hamilton Handbuch, 1938,
+Junkers VLS, Bauart Hamilton, Ersatzteilliste,1939
+Junkers VLS, Bauart Hamilton, Truppen-Ersatzteilliste,1940
+Junkers VLS, Bauart Hamilton, Kurz-Betriebs- u. Wartungs-Anweisung, 1939
+Junkers 20° Drehzahlregler für VLS Bauart Hamilton am JUMO 211 A, 1939
+Junkers Metall-Luftschrauben, Betriebsanweisung u. Wartungsvorschrift, ca. 1938
+Junkers Metall-Luftschrauben, Werksprospekt, ca. 1935
+Junkers Metall-Luftschraube Bauart PAK, Gebrauchsanweisung, 1943
+ 
+Junkers VS 5, 1Junkers%20VS%205,%201VS%205%20Lehrbild-LiBi%20(3)Junkers%20VS%2011-LiBi%20(3)
+ 
+Bestell-Nr.: LAH-438
+ 
+ 
+ 
+ 
+39,00 €
