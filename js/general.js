@@ -32,20 +32,20 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="dropdown">
             <h2 class="title">Motoren & Luftschrauben</h2>
             <ul class="submenu">
-              <a href="/LAH-Demo/Motoren/argus.html">Argus</a>
-              <a href="/LAH-Demo/Motoren/bmw.html">BMW</a>
-              <a href="/LAH-Demo/Motoren/daimler_benz.html">Daimler Benz</a>
-              <a href="/LAH-Demo/Motoren/gnome_rhone.html">Gnome Rhone</a>
-              <a href="/LAH-Demo/Motoren/hirth.html">Hirth</a>
-              <a href="/LAH-Demo/Motoren/jumo.html">JUMO</a>
-              <a href="/LAH-Demo/Motoren/oberursel.html">Oberursel</a>
-              <a href="/LAH-Demo/Motoren/salmson.html">Salmson</a>
-              <a href="/LAH-Demo/Motoren/siemens_bramo.html">Siemens - BRAMO</a>
-              <a href="/LAH-Demo/Motoren/vdm.html">VDM</a>
-              <a href="/LAH-Demo/Motoren/vergaser_einspritzanlagen.html">Vergaser und Einspritzanlagen</a>
-              <a href="/LAH-Demo/Motoren/walter_motoren.html">Walter Motoren</a>
-              <a href="/LAH-Demo/Motoren/walter_hwk.html">Walter HWK</a>
-              <a href="/LAH-Demo/Motoren/zuendapp.html">Zuendapp</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/argus.html">Argus</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/bmw.html">BMW</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/daimler_benz.html">Daimler Benz</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/gnome_rhone.html">Gnome Rhone</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/hirth.html">Hirth</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/jumo.html">JUMO</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/oberursel.html">Oberursel</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/salmson.html">Salmson</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/siemens_bramo.html">Siemens - BRAMO</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/vdm.html">VDM</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/vergaser_einspritzanlagen.html">Vergaser und Einspritzanlagen</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/walter_motoren.html">Walter Motoren</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/walter_hwk.html">Walter HWK</a>
+              <a href="/LAH-Demo/Motoren_Luftschrauben/zuendapp.html">Zuendapp</a>
             </ul>
             </div>
 
