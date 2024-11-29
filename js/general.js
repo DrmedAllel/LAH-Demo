@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (header) {
         header.innerHTML = `
           <h1><a href="/LAH-Demo/index.html" title="Startseite">Luftfahrt-Archiv Hafner</a></h1>
-          <p>1990-2024</p>
+          <p>gegr. 1990</p>
           <nav>
             <div class="dropdown">
             <h2 class="title">Flugzeuge</h2>
