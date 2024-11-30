@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
 
             <div class="dropdown">
-            <a class="title cart_link" href="/warenkorb.html">Warenkorb</a>
+            <a class="title cart_link" href="/LAH-Demo/warenkorb.html">Warenkorb</a>
             </div>
 
           </nav>
