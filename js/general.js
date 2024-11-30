@@ -72,10 +72,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (footer) {
         footer.innerHTML = `
     <p>Luftfahrt-Archiv Hafner, Udo Hafner, gegr. 1990</p>
-    <a href="agb.html">AGB</a> 
-    <a href="links.html">Links</a> 
-    <a href="about.html">Wir über uns</a>
-    <a href="impressum.html">Impressum</a>
+    <a href="/LAH-Demo/agb.html">AGB</a> 
+    <a href="/LAH-Demo/links.html">Links</a> 
+    <a href="/LAH-Demo/about.html">Wir über uns</a>
+    <a href="/LAH-Demo/impressum.html">Impressum</a>
         `;
     }
 });
