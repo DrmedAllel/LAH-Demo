@@ -77,7 +77,13 @@ main {
 .item-number{
     font-size: 1em;
     font-weight: 700;
-    color: blue;
+    color: var(--card-color);
+    transition: 0.25s;
+}
+
+.item-number:hover{
+    color: var(--text-color);
+    transition: 0.25s;
 }
 
 .item_images {
