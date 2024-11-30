@@ -95,18 +95,21 @@ main {
 }
 
 .add-to-cart{
-    background-color: var(--card-color);
+    background-color: var(--background-color);
     color: var(--text-color);
     font-size: 1em;
     font-weight: 700;
     padding: 0.5em;
-    border: none;
+    border: 1px solid var(--text-color);
     border-radius: 0.7em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition: 0.25s;
 }
 
 .add-to-cart:hover{
     background-color: var(--confirm-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .remove-from-cart{
