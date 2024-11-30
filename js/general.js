@@ -50,11 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
 
             <div class="dropdown">
-            <a class="title" href="/LAH-Demo/flugzeug_bewaffnung.html">Flugzeug-Bewaffnung</a>
+            <a class="title" href="/LAH-Demo/Zusatz/flugzeug_bewaffnung.html">Flugzeug-Bewaffnung</a>
             </div>
 
             <div class="dropdown">
-            <a class="title" href="/LAH-Demo/flugzeug_ausruestung.html">Flugzeug-Ausrüstung</a>
+            <a class="title" href="/LAH-Demo/Zusatz/flugzeug_ausruestung.html">Flugzeug-Ausrüstung</a>
             </div>
 
             <div class="dropdown">
