@@ -95,7 +95,8 @@ header nav {
     text-decoration: underline;
 }
 
-.dropdown:hover .submenu {
+.dropdown:hover .submenu,
+.dropdown:focus-within .submenu {
     display: block;
 }
 
