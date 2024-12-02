@@ -95,6 +95,7 @@ function loadCart() {
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
             <h3>${item.name}</h3>
+            <p>ID: ${item.id}</p>
             <p>$${item.price}</p>
             <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', this);">Aus dem Warenkorb entfernen</button>
             `;
