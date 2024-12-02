@@ -104,12 +104,14 @@ function loadCart() {
 
 window.addEventListener('scroll', function() {
     const shoppingCart = document.querySelector('.shopping_cart');
-    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    if (shoppingCart) {
+        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
 
-    if (scrollPercent >= 15) {
-        shoppingCart.style.display = 'flex';
-    } else {
-        shoppingCart.style.display = 'none';
+        if (scrollPercent >= 15) {
+            shoppingCart.style.display = 'flex';
+        } else {
+            shoppingCart.style.display = 'none';
+        }
     }
 });
 
