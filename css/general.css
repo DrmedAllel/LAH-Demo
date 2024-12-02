@@ -99,6 +99,7 @@ header nav {
 .dropdown:focus-within .submenu,
 .dropdown:active .submenu {
     display: block;
+    transition: 0.25s;
 }
 
 .submenu{
@@ -110,6 +111,7 @@ header nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 1em;
     padding: 1em;
+    transition: 0.25s;
 }
 
 
