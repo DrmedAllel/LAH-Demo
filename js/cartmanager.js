@@ -67,7 +67,11 @@ function loadCart() {
     const cartItems = [];
     for (let cookie of document.cookie.split('; ')) {
         if (cookie.startsWith('LAH-')) {
-            cartItems.push(JSON.parse(cookie.substring(4 + 'LAH-'.length)));
+            try {
+                cartItems.push(JSON.parse(cookie.substring(4 + 'LAH-'.length)));
+            } catch (e) {
+                console.error('Error parsing JSON from cookie:', e);
+            }
         }
     }
 
