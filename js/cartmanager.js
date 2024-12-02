@@ -68,7 +68,8 @@ function loadCart() {
     for (let cookie of document.cookie.split('; ')) {
         if (cookie.startsWith('LAH-')) {
             try {
-                cartItems.push(JSON.parse(cookie.substring(4 + 'LAH-'.length)));
+                const jsonString = cookie.substring(cookie.indexOf('=') + 1);
+                cartItems.push(JSON.parse(jsonString));
             } catch (e) {
                 console.error('Error parsing JSON from cookie:', e);
                 console.error('Cookie:', cookie);
