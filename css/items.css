@@ -99,6 +99,7 @@ main {
     width: auto;
     height: min(10em, 15vw);
     transition: 0.25s;
+    border: 1px solid #000;
 }
 
 .item_images img:hover{
