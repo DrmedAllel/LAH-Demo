@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (order_info) {
         order_info.innerHTML = `
         <div class="order_info_row">
-            <p>Alle Dateien werden als <img src="../images/dvd.jpg" alt="DVD" class="order_info_img"> DVD oder zum <img src="../images//download.png" alt="Download" class="order_info_img"> Download angeboten</p>
+            <p>Alle Dateien werden als <img src="../images/dvd.jpg" alt="DVD" class="order_info_img"> DVD oder zum <img src="../images//download.png" alt="Download" class="order_info_img"> Download angeboten.</p>
         </div>
         <div class="order_info_row">
             <p><img src="../images//buch.png" alt="Buch-Reproduktion" class="order_info_img"> Buch-Reproduktion auf Anfrage: <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
