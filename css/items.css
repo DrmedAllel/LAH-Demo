@@ -23,6 +23,14 @@ main {
     gap: 1em;
 }
 
+.order_info_row p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em;
+}
+
 .order_info_img {
     width: auto;
     height: 1.5em;
