@@ -16,14 +16,27 @@ window.onload = function () {
 document.addEventListener('DOMContentLoaded', function() {
     const order_info = document.getElementById('order_info');
     if (order_info) {
-        order_info.innerHTML = `
-        <div class="order_info_row">
-            <p>Alle Dateien werden als <img src="../images/dvd.jpg" alt="DVD" class="order_info_img"> DVD oder zum <img src="../images//download.png" alt="Download" class="order_info_img"> Download angeboten.</p>
-        </div>
-        <div class="order_info_row">
-            <p><img src="../images//buch.png" alt="Buch-Reproduktion" class="order_info_img"> Buch-Reproduktion auf Anfrage: <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
-        </div>
-        <p>Bestellungen über die Website oder über Mail möglich: <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
-            `;
+        const language = getCookie('language');
+        if (language === 'de') {
+            order_info.innerHTML = `
+            <div class="order_info_row">
+                <p>Alle Dateien werden als <img src="../images/dvd.jpg" alt="DVD" class="order_info_img"> DVD oder zum <img src="../images//download.png" alt="Download" class="order_info_img"> Download angeboten.</p>
+            </div>
+            <div class="order_info_row">
+                <p><img src="../images//buch.png" alt="Buch-Reproduktion" class="order_info_img"> Buch-Reproduktion auf Anfrage: <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
+            </div>
+            <p>Bestellungen über die Website oder über Mail möglich: <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
+                `;
+        } else {
+            order_info.innerHTML = `
+            <div class="order_info_row">
+                <p>All files are offered as <img src="../images/dvd.jpg" alt="DVD" class="order_info_img"> DVD or for <img src="../images//download.png" alt="Download" class="order_info_img"> download.</p>
+            </div>
+            <div class="order_info_row">
+                <p><img src="../images//buch.png" alt="Book reproduction" class="order_info_img"> Book reproduction on request: <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
+            </div>
+            <p>Orders possible via the website or by mail: <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
+                `;
+        }
     }
 });

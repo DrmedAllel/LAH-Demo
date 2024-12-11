@@ -29,6 +29,31 @@ body{
     background-color: var(--background-color);
 }
 
+#language_selection {
+    position: fixed;
+    top: 2.5%;
+    right: min(4em,4vw);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: min(1em,1vw);
+}
+
+.flag {
+    width: min(2em,3vw);
+    height: auto;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.25s;
+}
+
+.flag:hover {
+    opacity: 1;
+    transition: 0.25s;
+}
+
+
 header {
     display: flex;
     flex-direction: column;
