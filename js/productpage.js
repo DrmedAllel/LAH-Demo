@@ -1,15 +1,31 @@
+
 window.onload = function () {
     //get all buttons from the class add-to-cart
     const buttons = document.getElementsByClassName('add-to-cart');
+
+    const language = getCookie('language');
+
+    for (let button of buttons) {
+        if (language === 'de') {
+            button.innerHTML = 'In den Warenkorb';
+        } else {
+            button.innerHTML = 'Add to Cart';
+        }
+    }
+
 
     //for each button check if there exists a cookie with the id of the button
     for (let button of buttons) {
         //get the id attribute of the button element
         const itemId = button.getAttribute('id');
         if (getCookie(itemId) !== null) {
-            button.innerHTML = 'Im Warenkorb';
+            if (language === 'de') {
+                button.innerHTML = 'Im Warenkorb';
+            } else {
+                button.innerHTML = 'In Cart';
+            }
             button.classList.add('remove-from-cart');
-        }
+        } 
     }
 }
 

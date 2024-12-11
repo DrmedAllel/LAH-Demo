@@ -13,8 +13,16 @@ function addToCart(itemId, itemName, itemPrice, button) {
 
     console.log(`Item added to cart: ${itemName} (${itemId}) - $${itemPrice}`);
 
+
+    const language = getCookie('language');
+
     //Change the button text to remove from cart
-    button.innerHTML = 'Im Warenkorb';
+    if (language === 'de') {
+        button.innerHTML = 'Im Warenkorb';
+    } else {
+        button.innerHTML = 'In Cart';
+    }
+    
     //add the class remove-from-cart to the button
     button.classList.add('remove-from-cart');
 
@@ -41,8 +49,16 @@ function removeFromCart(itemId, button) {
 
     console.log(`Item removed from cart: ${itemId}`);
 
+
+    const language = getCookie('language');
+
+
     //Change the button text to add to cart
-    button.innerHTML = 'In den Warenkorb';
+    if (language === 'de') {
+        button.innerHTML = 'In den Warenkorb';
+    } else {
+        button.innerHTML = 'Add to Cart';
+    }
 }
 
 
