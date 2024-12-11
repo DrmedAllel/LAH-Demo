@@ -206,8 +206,8 @@ document.addEventListener('DOMContentLoaded', function() {
       cookieBanner.style.transform = 'translateY(100%)';
       cookieBanner.style.transition = 'transform 1s ease-in-out';
       cookieBanner.innerHTML = `
-      <p>Wir verwenden Cookies, um Ihnen das beste Erlebnis auf unserer Website zu bieten. Durch die weitere Nutzung dieser Website stimmen Sie der Verwendung von Cookies zu.</p>
-      <button onclick="acceptCookies()">Zustimmen</button>
+      <p>We use cookies to ensure you get the best experience on our website. By continuing to use this site, you consent to the use of cookies.</p>
+      <button onclick="acceptCookies()">Accept</button>
       `;
       document.body.appendChild(cookieBanner);
       
