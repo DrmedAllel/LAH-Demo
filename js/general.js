@@ -151,12 +151,21 @@ document.addEventListener('DOMContentLoaded', function() {
   // add the language selection to the page
   const main = document.querySelector('main');
   if (main) {
-      main.innerHTML = `
-      <div id="language_selection">
-        <img src="../images/language_selection/germany.png" alt="Germany Flag" id="germany_flag" class="flag flag_active" title="Seite auf Deutsch">
-        <img src="../images/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="Page in English">
-      </div>
-      ` + main.innerHTML;
+      if (window.location.pathname.endsWith('/index.html')) {
+        main.innerHTML = `
+        <div id="language_selection">
+          <img src="images/language_selection/germany.png" alt="Germany Flag" id="germany_flag" class="flag flag_active" title="Seite auf Deutsch">
+          <img src="images/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="Page in English">
+        </div>
+        ` + main.innerHTML;
+      } else {
+        main.innerHTML = `
+        <div id="language_selection">
+          <img src="../images/language_selection/germany.png" alt="Germany Flag" id="germany_flag" class="flag flag_active" title="Seite auf Deutsch">
+          <img src="../images/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="Page in English">
+        </div>
+        ` + main.innerHTML;
+      }
   }
 });
     
