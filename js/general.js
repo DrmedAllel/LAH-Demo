@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
               `;
         } else {
           header.innerHTML = `
-              <h1><a href="/LAH-Demo/index.html" title="Homepage">Luftfahrtarchiv Archiv Hafner</a></h1>
+              <h1><a href="/LAH-Demo/index.html" title="Homepage">Luftfahrt-Archiv Hafner</a></h1>
               <p>est. 1990</p>
               <nav>
                 <div class="dropdown">
