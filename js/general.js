@@ -188,7 +188,8 @@ function getCookie(name) {
   const nameEQ = name + "=";
   const ca = document.cookie.split(';');
   for (let c of ca) {
-      if (c.trim().startsWith(nameEQ)) return c.substring(nameEQ.length, c.length);
+      let cookie = c.trim();
+      if (cookie.startsWith(nameEQ)) return cookie.substring(nameEQ.length, cookie.length);
   }
   return null;
 }
