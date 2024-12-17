@@ -181,7 +181,7 @@ function setCookie(name, value, days) {
 }
 
 function deleteCookie(name) {
-  document.cookie = name + '=; Max-Age=-99999999; path=/;';
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
 function getCookie(name) {
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
       cookieBanner.style.transform = 'translateY(100%)';
       cookieBanner.style.transition = 'transform 1s ease-in-out';
       cookieBanner.innerHTML = `
-      <p>We use cookies to ensure you get the best experience on our website. By continuing to use this site, you consent to the use of cookies.</p>
+      <p>We use cookies and local browser storage to ensure you get the best experience on our website. By continuing to use this site, you consent to the use of cookies.</p>
       <button onclick="acceptCookies()">Accept</button>
       `;
       document.body.appendChild(cookieBanner);
@@ -242,5 +242,37 @@ document.addEventListener('click', function(event) {
   }
 });
 
+
+//local storage functions
+
+function setLocalStorageItem(key, value, expireDays) {
+  const item = {
+    value: value,
+    expiry: expireDays ? new Date().getTime() + expireDays * 24 * 60 * 60 * 1000 : null
+  };
+  localStorage.setItem(key, JSON.stringify(item));
+}
+
+function getLocalStorageItem(key) {
+  const itemStr = localStorage.getItem(key);
+  if (!itemStr) {
+    return null;
+  }
+  const item = JSON.parse(itemStr);
+  if (item.expiry && new Date().getTime() > item.expiry) {
+    localStorage.removeItem(key);
+    return null;
+  }
+  return item.value;
+}
+
+
+function removeLocalStorageItem(key) {
+  localStorage.removeItem(key);
+}
+
+function clearLocalStorage() {
+  localStorage.clear();
+}
 
 

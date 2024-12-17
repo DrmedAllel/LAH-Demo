@@ -2,14 +2,15 @@ function addToCart(itemId, itemName, itemPrice, button) {
     const cartItem = {
         id: itemId,
         name: itemName,
-        price: itemPrice
+        price: itemPrice,
+        type: 'download'
     };
 
     // Convert the cart item to a JSON string
     const cartItemString = JSON.stringify(cartItem);
 
     // Set the cookie with the cart item
-    setCookie(itemId, cartItemString, 1);
+    setLocalStorageItem(itemId, cartItemString, 1);
 
     console.log(`Item added to cart: ${itemName} (${itemId}) - $${itemPrice}`);
 
@@ -42,7 +43,7 @@ function addToCart(itemId, itemName, itemPrice, button) {
 
 function removeFromCart(itemId, button) {
     //delete the cookie
-    deleteCookie(itemId);
+    removeLocalStorageItem(itemId);
 
     //remove the class remove-from-cart from the button
     button.classList.remove('remove-from-cart');
@@ -64,7 +65,7 @@ function removeFromCart(itemId, button) {
 
 function editCartItem(itemId, itemName, itemPrice, button) {
     // Check if the item is in the cart
-    if (document.cookie.includes(itemId)) {
+    if (localStorage.getItem(itemId)) {
         removeFromCart(itemId, button);
     } else {
         addToCart(itemId, itemName, itemPrice, button);
@@ -79,26 +80,27 @@ window.onload = function() {
 
 function loadCart() {
     console.log('Loading cart...');
-    // Get all Cookies beginning with LAH- and add them to a list
+    // Get all items from localStorage beginning with LAH- and add them to a list
     const cartItems = [];
-    for (let cookie of document.cookie.split('; ')) {
-        if (cookie.startsWith('LAH-')) {
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('LAH-')) {
             try {
-                const jsonString = cookie.substring(cookie.indexOf('=') + 1);
-                cartItems.push(JSON.parse(jsonString));
+                getLocalStorageItem(key);
+                cartItems.push(JSON.parse(getLocalStorageItem(key)));
             } catch (e) {
-                console.error('Error parsing JSON from cookie:', e);
-                console.error('Cookie:', cookie);
+                console.error('Error parsing JSON from localStorage:', e);
+                console.error('Key:', key);
             }
         }
     }
 
     // Get all cart elements
     const carts = document.getElementsByClassName('cart');
-    
+
     // Loop through each cart element
     Array.from(carts).forEach(cart => {
-        //remove all children of the cart element
+        // Remove all children of the cart element
         while (cart.firstChild) {
             cart.removeChild(cart.firstChild);
         }
@@ -153,7 +155,7 @@ document.addEventListener('change', function(event) {
             itemPriceElement.innerHTML = 'Preis als Buch nur auf Anfrage.';
         } else {
             const itemId = event.target.closest('.cart-item').querySelector('.ItemID').textContent.split(': ')[1];
-            const cartItem = JSON.parse(getCookie(itemId));
+            const cartItem = JSON.parse(getLocalStorageItem(itemId));
             itemPriceElement.innerHTML = `${cartItem.price} €`;
         }
 

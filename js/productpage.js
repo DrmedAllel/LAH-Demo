@@ -10,7 +10,7 @@ async function loadButtons () {
     for (let button of buttons) {
         //get the id attribute of the button element
         const itemId = button.getAttribute('id');
-        if (getCookie(itemId) !== null) {
+        if (getLocalStorageItem(itemId) !== null) {
             if (language === 'de') {
                 button.innerHTML = 'Im Warenkorb';
             } else {
@@ -59,7 +59,8 @@ window.onload = function () {
     for (let item of items) {
         const ItemTitle = item.getElementsByClassName('item_title')[0].innerText;
         const ItemPrice = item.getElementsByClassName('price')[0].innerText;
-        const ItemID = item.getElementsByClassName('item-number')[0].innerText
+        let ItemID = item.getElementsByClassName('item-number')[0].innerText;
+        ItemID = ItemID.split(': ')[1];
 
 
         const button = document.createElement('button');
