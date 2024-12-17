@@ -83,3 +83,58 @@ input, button, #comments {
     width: 30em;
     height: 10em;
 }
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    border-radius: 0.5em;
+    border: 1px solid var(--text-color);
+    margin-bottom: 1em;
+}
+
+.ItemHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ItemTitle {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.ItemPrice {
+    font-size: 1em;
+}
+
+.ItemID {
+    font-size: 1em;
+    color: var(--card-color);
+    transition: 0.25s;
+}
+
+.ItemID:hover {
+    color: var(--text-color);
+    transition: 0.25s;
+}
+
+.item-options {
+    font-size: 1em;
+    margin-bottom: 2em;
+    width: auto;
+    margin-right: auto;
+}
+
+.add-to-cart{
+    font-size: 0.5em;
+    width: auto;
+    margin-left: auto;
+}

@@ -110,9 +110,16 @@ function loadCart() {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
-            <h3 class="ItemTitle">${item.name}</h3>
-            <p class="ItemID">ID: ${item.id}</p>
+            <div class="ItemHeader">
+                <h3 class="ItemTitle">${item.name}</h3>
+                <p class="ItemID">ID: ${item.id}</p>
+            </div>
             <p class="ItemPrice">${item.price} €</p>
+            <select class="item-options">
+                <option value="download" selected>Download</option>
+                <option value="dvd">DVD</option>
+                <option value="book">Book</option>
+            </select>
             <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', this);">Aus dem Warenkorb entfernen</button>
             `;
             cart.appendChild(cartItem);
