@@ -3,6 +3,8 @@ async function loadButtons () {
     //get all buttons from the class add-to-cart
     const buttons = document.getElementsByClassName('add-to-cart');
 
+    //get the language cookie
+    const language = getCookie('language');
 
     //for each button check if there exists a cookie with the id of the button
     for (let button of buttons) {
