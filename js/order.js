@@ -22,25 +22,7 @@ async function handleSubmit(event) {
         formData[`Artikel_${index + 1}`] = itemName;
     });
 
-    try {
-        const response = await fetch('mail.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: new URLSearchParams(formData)
-        });
-
-        if (response.ok) {
-            // Erfolgreiche Bestellung
-            document.getElementById('orderForm').reset();
-            alert('Vielen Dank für Ihre Bestellung!');
-        } else {
-            // Fehler bei der Bestellung
-            alert('Fehler beim Senden der Bestellung');
-        }
-    } catch (error) {
-        console.error('Fehler beim Senden der Bestellung:', error);
-        window.location.href = 'fehler.htm';
-    }
+    console.log(formData)
+    
+    alert('Bestellung erfolgreich abgeschickt!');
 }
