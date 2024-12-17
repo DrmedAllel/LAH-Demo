@@ -20,55 +20,58 @@
 
   <main>
     <form id="orderForm" onsubmit="handleSubmit(event)">
-        <h1>Bestellformular</h1>
         
-        <div class="form-group">
-            <label for="name">Name / Family-Name:</label>
-            <input type="text" id="name" name="name" autocomplete="family-name" required>
-        </div>
+        <div class="left-side">
+            <h1>Bestellformular</h1>
+            <div class="form-group">
+                <label for="name">Name / Family-Name:</label>
+                <input type="text" id="name" name="name" autocomplete="family-name" required>
+            </div>
 
-        <div class="form-group">
-            <label for="prename">Vorname / First-Name:</label>
-            <input type="text" id="prename" name="prename" autocomplete="given-name" required>
-        </div>
+            <div class="form-group">
+                <label for="prename">Vorname / First-Name:</label>
+                <input type="text" id="prename" name="prename" autocomplete="given-name" required>
+            </div>
 
-        <div class="form-group">
-            <label for="email">E-Mail:</label>
-            <input type="email" id="email" name="email" autocomplete="email" required>
-        </div>
+            <div class="form-group">
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
 
-        <div class="form-group">
-            <label for="address">Straße, Hausnummer / Street, House-Number:</label>
-            <div>
-                <input id="street" name="street" autocomplete="address-line1" required>
-                <input id="housenumber" name="housenumber" autocomplete="address-line3" required>
+            <div class="form-group">
+                <label for="address">Straße, Hausnummer / Street, House-Number:</label>
+                <div>
+                    <input id="street" name="street" autocomplete="address-line1" required>
+                    <input id="housenumber" name="housenumber" autocomplete="address-line3" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="zip">PLZ, Wohnort / ZIP-Code, City:</label>
+                <div>
+                    <input type="text" id="zip" name="zip" autocomplete="postal-code" required>
+                    <input type="text" id="city" name="city" autocomplete="address-level2" required>
+                </div>     
+            </div>
+
+            <div class="form-group" id="country_div">
+                <label for="country">Land / Country:</label>
+                <input type="text" id="country" name="country" autocomplete="country" required>
+            </div>
+
+            <div class="form-group" id="comment-group">
+                <label for="comments">Falls Sie noch Anmerkungen zur Bestellung haben, tragen Sie diese bitte hier ein: </label>
+                <textarea id="comments" name="comments"></textarea>
+            </div>
+            
+            <button type="submit" id="submit">Bestellen</button>
+        </div>
+        <div class="roght-side">
+            <div class="form-group" id="items">
+                <label for="items">Warenkorb:</label>
+                <div class="cart"></div>
             </div>
         </div>
-
-        <div class="form-group">
-            <label for="zip">PLZ, Wohnort / ZIP-Code, City:</label>
-            <div>
-                <input type="text" id="zip" name="zip" autocomplete="postal-code" required>
-                <input type="text" id="city" name="city" autocomplete="address-level2" required>
-            </div>     
-        </div>
-
-        <div class="form-group" id="country_div">
-            <label for="country">Land / Country:</label>
-            <input type="text" id="country" name="country" autocomplete="country" required>
-        </div>
-
-        <div class="form-group" id="items">
-            <label for="items">Warenkorb:</label>
-            <div class="cart"></div>
-        </div>
-
-        <div class="form-group" id="comment-group">
-            <label for="comments">Falls Sie noch Anmerkungen zur Bestellung haben, tragen Sie diese bitte hier ein: </label>
-            <textarea id="comments" name="comments"></textarea>
-        </div>
-        
-        <button type="submit" id="submit">Bestellen</button>
     </form>
     </form>
   </main>

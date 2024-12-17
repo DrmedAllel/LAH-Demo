@@ -19,14 +19,17 @@ h1 {
     gap: 1em;
 }
 
-main form {
+#orderForm {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: min(60em, 60%);
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-around;
+    width: auto;
+    gap: 5em;
+    /* add border between the items */
 }
 
-form #items {
+#items {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,20 +92,22 @@ input, button, #comments {
     flex-direction: column;
     align-items: left;
     justify-content: space-around;
-    width: 100%;
-    padding-left: 1em;
-    padding-right: 1em;
+    width: 30em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     padding-top: 0.5em;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
     border-radius: 0.5em;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--card-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 1em;
 }
 
-.ItemHeader {
+.ItemRow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
@@ -128,19 +133,18 @@ input, button, #comments {
 
 .item-options {
     font-size: 1em;
-    margin-bottom: 2em;
     width: auto;
-    margin-right: auto;
 }
 
 .add-to-cart{
-    background-color: var(--card-color);
-    color: var(--text-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--card-color);
+    color: var(--card-color);
     margin-left: auto;
-    font-size: 0.5em;
+    font-size: 1em;
     font-weight: 700;
-    padding: 0.5em;
-    border: 1px solid var(--text-color);
+    width: auto;
+    height: auto;
     border-radius: 0.7em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -150,4 +154,6 @@ input, button, #comments {
 .add-to-cart:hover{
     background-color: var(--cancel-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
 }

@@ -110,19 +110,20 @@ function loadCart() {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
-            <div class="ItemHeader">
+            <div class="ItemRow">
                 <h3 class="ItemTitle">${item.name}</h3>
                 <p class="ItemID">ID: ${item.id}</p>
             </div>
-            
-            <select class="item-options">
-                <option value="download" selected>Download</option>
-                <option value="dvd">DVD</option>
-                <option value="book">Book</option>
-            </select>
+            <div class="ItemRow">
+                <select class="item-options">
+                    <option value="download" selected>Download</option>
+                    <option value="dvd">DVD</option>
+                    <option value="book">Book</option>
+                </select>
 
-            <p class="ItemPrice">${item.price} €</p>
-            <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', this);">Aus dem Warenkorb entfernen</button>
+                <p class="ItemPrice">${item.price} €</p>
+            </div>
+            <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', this);">×</button>
             `;
             cart.appendChild(cartItem);
         }
@@ -155,6 +156,8 @@ document.addEventListener('change', function(event) {
             const cartItem = JSON.parse(getCookie(itemId));
             itemPriceElement.innerHTML = `${cartItem.price} €`;
         }
+
+        
     }
 });
 

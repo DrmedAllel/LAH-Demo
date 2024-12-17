@@ -1,17 +1,7 @@
 
-window.onload = function () {
+async function loadButtons () {
     //get all buttons from the class add-to-cart
     const buttons = document.getElementsByClassName('add-to-cart');
-
-    const language = getCookie('language');
-
-    for (let button of buttons) {
-        if (language === 'de') {
-            button.innerHTML = 'In den Warenkorb';
-        } else {
-            button.innerHTML = 'Add to Cart';
-        }
-    }
 
 
     //for each button check if there exists a cookie with the id of the button
@@ -56,3 +46,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+
+window.onload = function () {
+    //get all .item elements
+    const items = document.getElementsByClassName('item');
+    const language = getCookie('language');
+
+    //for each item add this button to the end of the div <button class="add-to-cart" id="LAH-508" onclick="editCartItem('LAH-508', 'Siebel Fh 104', '29.00', this)">In den Warenkorb</button>
+    for (let item of items) {
+        const ItemTitle = item.getElementsByClassName('item_title')[0].innerText;
+        const ItemPrice = item.getElementsByClassName('price')[0].innerText;
+        const ItemID = item.getElementsByClassName('item-number')[0].innerText
+
+
+        const button = document.createElement('button');
+        button.className = 'add-to-cart';
+        button.id = ItemID;
+        button.setAttribute('onclick', `editCartItem('${ItemID}', '${ItemTitle}', '${ItemPrice}', this)`);
+        button.innerHTML = language === 'de' ? 'In den Warenkorb' : 'Add to Cart';
+        item.appendChild(button);
+    }
+
+    loadButtons();
+}
