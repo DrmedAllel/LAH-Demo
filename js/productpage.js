@@ -66,7 +66,7 @@ window.onload = function () {
         const button = document.createElement('button');
         button.className = 'add-to-cart';
         button.id = ItemID;
-        button.setAttribute('onclick', `editCartItem('${ItemID}', '${ItemTitle}', '${ItemPrice}', this)`);
+        button.setAttribute('onclick', `editCartItem('${ItemID}', '${ItemTitle}', '${ItemPrice}', 'download', this)`);
         button.innerHTML = language === 'de' ? 'In den Warenkorb' : 'Add to Cart';
         item.appendChild(button);
     }

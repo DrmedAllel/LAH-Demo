@@ -1,9 +1,9 @@
-function addToCart(itemId, itemName, itemPrice, button) {
+function addToCart(itemId, itemName, itemPrice, itemType, button) {
     const cartItem = {
         id: itemId,
         name: itemName,
         price: itemPrice,
-        type: 'download'
+        type: itemType
     };
 
     // Convert the cart item to a JSON string
@@ -63,12 +63,12 @@ function removeFromCart(itemId, button) {
 }
 
 
-function editCartItem(itemId, itemName, itemPrice, button) {
+function editCartItem(itemId, itemName, itemPrice, itemType, button) {
     // Check if the item is in the cart
     if (localStorage.getItem(itemId)) {
         removeFromCart(itemId, button);
     } else {
-        addToCart(itemId, itemName, itemPrice, button);
+        addToCart(itemId, itemName, itemPrice, itemType, button);
     }
 
     loadCart();
@@ -118,7 +118,7 @@ function loadCart() {
             </div>
             <div class="ItemRow">
                 <select class="item-options">
-                    <option value="download" selected>Download</option>
+                    <option value="download">Download</option>
                     <option value="dvd">DVD</option>
                     <option value="book">Book</option>
                 </select>
@@ -128,6 +128,9 @@ function loadCart() {
             <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', this);">×</button>
             `;
             cart.appendChild(cartItem);
+            let selectedOption = item.type;
+            const itemOptions = cartItem.querySelector('.item-options');
+            itemOptions.value = selectedOption;
         }
     });
 }
@@ -150,16 +153,21 @@ document.addEventListener('change', function(event) {
     if (event.target.classList.contains('item-options')) {
         const selectedOption = event.target.value;
         const itemPriceElement = event.target.nextElementSibling;
+        const itemId = event.target.closest('.cart-item').querySelector('.ItemID').textContent.split(': ')[1];
 
         if (selectedOption === 'book') {
             itemPriceElement.innerHTML = 'Preis als Buch nur auf Anfrage.';
         } else {
             const itemId = event.target.closest('.cart-item').querySelector('.ItemID').textContent.split(': ')[1];
             const cartItem = JSON.parse(getLocalStorageItem(itemId));
-            itemPriceElement.innerHTML = `${cartItem.price} €`;
+            itemPriceElement.innerHTML = `${cartItem.price}`;
         }
 
-        
+        let Item = getLocalStorageItem(itemId);
+        Item = JSON.parse(Item);
+        Item.type = selectedOption;
+        Item = JSON.stringify(Item);
+        setLocalStorageItem(itemId, Item, 1);
     }
 });
 
