@@ -134,7 +134,20 @@ input, button, #comments {
 }
 
 .add-to-cart{
-    font-size: 0.5em;
-    width: auto;
+    background-color: var(--card-color);
+    color: var(--text-color);
     margin-left: auto;
+    font-size: 0.5em;
+    font-weight: 700;
+    padding: 0.5em;
+    border: 1px solid var(--text-color);
+    border-radius: 0.7em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.add-to-cart:hover{
+    background-color: var(--cancel-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }

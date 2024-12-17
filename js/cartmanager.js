@@ -114,12 +114,14 @@ function loadCart() {
                 <h3 class="ItemTitle">${item.name}</h3>
                 <p class="ItemID">ID: ${item.id}</p>
             </div>
-            <p class="ItemPrice">${item.price} €</p>
+            
             <select class="item-options">
                 <option value="download" selected>Download</option>
                 <option value="dvd">DVD</option>
                 <option value="book">Book</option>
             </select>
+
+            <p class="ItemPrice">${item.price} €</p>
             <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', this);">Aus dem Warenkorb entfernen</button>
             `;
             cart.appendChild(cartItem);
@@ -137,6 +139,21 @@ window.addEventListener('scroll', function() {
             shoppingCart.style.display = 'flex';
         } else {
             shoppingCart.style.display = 'none';
+        }
+    }
+});
+
+document.addEventListener('change', function(event) {
+    if (event.target.classList.contains('item-options')) {
+        const selectedOption = event.target.value;
+        const itemPriceElement = event.target.nextElementSibling;
+
+        if (selectedOption === 'book') {
+            itemPriceElement.innerHTML = 'Preis als Buch nur auf Anfrage.';
+        } else {
+            const itemId = event.target.closest('.cart-item').querySelector('.ItemID').textContent.split(': ')[1];
+            const cartItem = JSON.parse(getCookie(itemId));
+            itemPriceElement.innerHTML = `${cartItem.price} €`;
         }
     }
 });
