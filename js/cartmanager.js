@@ -110,9 +110,9 @@ function loadCart() {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
-            <h3>${item.name}</h3>
-            <p>ID: ${item.id}</p>
-            <p>${item.price} €</p>
+            <h3 class="ItemTitle">${item.name}</h3>
+            <p class="ItemID">ID: ${item.id}</p>
+            <p class="ItemPrice">${item.price} €</p>
             <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', this);">Aus dem Warenkorb entfernen</button>
             `;
             cart.appendChild(cartItem);

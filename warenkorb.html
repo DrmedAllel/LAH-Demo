@@ -24,38 +24,38 @@
         
         <div class="form-group">
             <label for="name">Name / Family-Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" autocomplete="family-name" required>
         </div>
 
         <div class="form-group">
-            <label for="name">Vorname / First-Name:</label>
-            <input type="text" id="prename" name="name" required>
+            <label for="prename">Vorname / First-Name:</label>
+            <input type="text" id="prename" name="prename" autocomplete="given-name" required>
         </div>
 
         <div class="form-group">
             <label for="email">E-Mail:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" required>
         </div>
 
         <div class="form-group">
             <label for="address">Straße, Hausnummer / Street, House-Number:</label>
             <div>
-                <input id="street" name="address" required></input>
-                <input id="housenumber" name="address" required></input>
+                <input id="street" name="street" autocomplete="address-line1" required>
+                <input id="housenumber" name="housenumber" autocomplete="address-line3" required>
             </div>
         </div>
 
         <div class="form-group">
             <label for="zip">PLZ, Wohnort / ZIP-Code, City:</label>
             <div>
-                <input type="text" id="zip" name="zip" required>
-                <input type="text" id="city" name="city" required>
+                <input type="text" id="zip" name="zip" autocomplete="postal-code" required>
+                <input type="text" id="city" name="city" autocomplete="address-level2" required>
             </div>     
         </div>
 
         <div class="form-group" id="country_div">
             <label for="country">Land / Country:</label>
-            <input type="text" id="country" name="country" required>
+            <input type="text" id="country" name="country" autocomplete="country" required>
         </div>
 
         <div class="form-group" id="items">
@@ -64,9 +64,12 @@
         </div>
 
         <div class="form-group" id="comment-group">
-            <label for="phone">Falls Sie noch Anmerkungen zur Bestellung haben, tragen Sie diese bitte hier ein: </label>
+            <label for="comments">Falls Sie noch Anmerkungen zur Bestellung haben, tragen Sie diese bitte hier ein: </label>
             <textarea id="comments" name="comments"></textarea>
+        </div>
+        
         <button type="submit" id="submit">Bestellen</button>
+    </form>
     </form>
   </main>
 
