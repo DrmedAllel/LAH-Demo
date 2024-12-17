@@ -131,6 +131,13 @@ function loadCart() {
             let selectedOption = item.type;
             const itemOptions = cartItem.querySelector('.item-options');
             itemOptions.value = selectedOption;
+
+            const itemPriceElement = cartItem.querySelector('.ItemPrice');
+            if (selectedOption === 'book') {
+                itemPriceElement.innerHTML = 'Preis als Buch nur auf Anfrage.';
+            } else {
+                itemPriceElement.innerHTML = `${item.price}`;
+            }
         }
     });
 }
