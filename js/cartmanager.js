@@ -123,7 +123,7 @@ function loadCart() {
                     <option value="book">Book</option>
                 </select>
 
-                <p class="ItemPrice">${item.price} €</p>
+                <p class="ItemPrice">${item.price}</p>
             </div>
             <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', this);">×</button>
             `;
