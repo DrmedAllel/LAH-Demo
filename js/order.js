@@ -174,6 +174,3 @@ function selectDownload(button) {
     }
 }
 
-function decodeString(String) {
-    return decodeURIComponent(String);
-}

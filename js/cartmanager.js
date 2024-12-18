@@ -242,6 +242,7 @@ function loadCart() {
             } else {
                 itemPriceElement.innerHTML = `${item.price}`;
             }
+            checkDownload();
         }
     });
 }
@@ -287,6 +288,40 @@ document.addEventListener('change', function(event) {
         Item = JSON.stringify(Item);
         setLocalStorageItem(itemId, Item, 1);
     }
+    checkDownload();
 });
+
+
+function checkDownload() {
+    //check if any of the cart items is download
+    const cartItems = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('LAH-')) {
+            try {
+                getLocalStorageItem(key);
+                cartItems.push(JSON.parse(getLocalStorageItem(key)));
+            } catch (e) {
+                console.error('Error parsing JSON from localStorage:', e);
+                console.error('Key:', key);
+            }
+        }
+    }
+
+    const formGroupDownload = document.querySelector('.form-group_download');
+    if (formGroupDownload) {
+        for (let item of cartItems) {
+            if (item.type === 'download') {
+                //make visible the download form
+                formGroupDownload.style.display = 'flex';
+                return;
+            }
+        }
+        //make invisible the download form
+        formGroupDownload.style.display = 'none';
+
+    }
+    
+}
 
 
