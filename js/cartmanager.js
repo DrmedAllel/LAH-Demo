@@ -155,6 +155,9 @@ window.onload = function() {
 }
 
 function loadCart() {
+    //Ge the Language Cookie
+    const language = getCookie('language');
+
     console.log('Loading cart...');
     // Get all items from localStorage beginning with LAH- and add them to a list
     const cartItems = [];
@@ -209,7 +212,11 @@ function loadCart() {
 
             const itemPriceElement = cartItem.querySelector('.ItemPrice');
             if (selectedOption === 'book') {
-                itemPriceElement.innerHTML = 'Preis als Buch nur auf Anfrage.';
+                if (language === 'de') {
+                    itemPriceElement.innerHTML = 'Preis als Buch nur auf Anfrage.';
+                } else {
+                    itemPriceElement.innerHTML = 'Price as a book only on request.';
+                }
             } else {
                 itemPriceElement.innerHTML = `${item.price}`;
             }
@@ -232,13 +239,20 @@ window.addEventListener('scroll', function() {
 });
 
 document.addEventListener('change', function(event) {
+    // get Language Cookie
+    const language = getCookie('language');
+
     if (event.target.classList.contains('item-options')) {
         const selectedOption = event.target.value;
         const itemPriceElement = event.target.closest('.cart-item').querySelector('.ItemPrice');
         const itemId = event.target.closest('.cart-item').querySelector('.ItemID').textContent.split(': ')[1];
 
         if (selectedOption === 'book') {
-            itemPriceElement.innerHTML = 'Preis als Buch nur auf Anfrage.';
+            if (language === 'de') {
+                itemPriceElement.innerHTML = 'Preis als Buch nur auf Anfrage.';
+            } else {
+                itemPriceElement.innerHTML = 'Price as a book only on request.';
+            }
         } else {
             const itemId = event.target.closest('.cart-item').querySelector('.ItemID').textContent.split(': ')[1];
             const cartItem = JSON.parse(getLocalStorageItem(itemId));
@@ -252,4 +266,5 @@ document.addEventListener('change', function(event) {
         setLocalStorageItem(itemId, Item, 1);
     }
 });
+
 
