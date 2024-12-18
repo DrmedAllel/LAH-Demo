@@ -220,6 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
       //with the next click on the page add the acceptCookies cookie
       document.addEventListener('click', function() {
           setCookie('acceptCookies', 'true', 365);
+          setCookie('language', 'en', 365);
           const banner = document.querySelector('.cookie-banner');
           if (banner) {
             banner.style.transform = 'translateY(100%)';
@@ -264,6 +265,15 @@ function getLocalStorageItem(key) {
     return null;
   }
   return item.value;
+}
+
+function getLocalStorageItems() {
+  const items = {};
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    items[key] = getLocalStorageItem(key);
+  }
+  return items;
 }
 
 
