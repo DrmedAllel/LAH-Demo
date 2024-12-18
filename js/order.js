@@ -73,8 +73,8 @@ function generateMessage(data) {
     message += `PLZ: ${data.zip}\n`;
     message += `Ort: ${data.city}\n`;
     message += `Land: ${data.country}\n`;
-    message += `Download: ${data.download}\n\n\n`;
-    message += `Zahlung: ${data.payment}\n`;
+    message += `Download: ${data.download}\n`;
+    message += `Zahlung: ${data.payment}\n\n\n`;
     message += `Bestellung:\n\n`;
     message += `${data.products}\n`;
     return message;
