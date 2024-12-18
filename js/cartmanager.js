@@ -252,7 +252,7 @@ window.addEventListener('scroll', function() {
     if (shoppingCart) {
         const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
 
-        if (scrollPercent >= 15) {
+        if (window.scrollY >= 100) {
             shoppingCart.style.display = 'flex';
         } else {
             shoppingCart.style.display = 'none';
