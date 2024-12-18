@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div> 
         </div>
         <div class="right-side">
+            <h2>${language === 'de' ? 'Warenkorb' : 'Cart'}</h2>
             <div class="cart"></div>
             <div id="stripe"></div>
         </div>
