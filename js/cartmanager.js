@@ -234,7 +234,7 @@ window.addEventListener('scroll', function() {
 document.addEventListener('change', function(event) {
     if (event.target.classList.contains('item-options')) {
         const selectedOption = event.target.value;
-        const itemPriceElement = event.target.nextElementSibling;
+        const itemPriceElement = event.target.closest('.cart-item').querySelector('.ItemPrice');
         const itemId = event.target.closest('.cart-item').querySelector('.ItemID').textContent.split(': ')[1];
 
         if (selectedOption === 'book') {
