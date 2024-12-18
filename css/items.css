@@ -64,7 +64,7 @@ main {
     border: 1px solid var(--card-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1em;
-    border-radius: 1em;
+    border-radius: 0.7em;
     margin-bottom: 4em;
     width: min(60em, 60%);
 }

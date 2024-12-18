@@ -95,7 +95,7 @@ header nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding-left: 2em;
     padding-right: 2em;
-    border-radius: 2em;
+    border-radius: 0.7em;
     margin-top: 0.75em;
 }
 
@@ -135,7 +135,7 @@ header nav {
     background-color: var(--background-color);
     border: 1px solid var(--card-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 1em;
+    border-radius: 0.7em;
     padding: 1em;
     transition: 0.25s;
 }
@@ -151,7 +151,7 @@ header nav {
     padding-bottom: 0.25;
     color: var(--text-color);
     text-decoration: none;
-    border-radius: 0.5em;
+    border-radius: 0.7em;
     white-space: nowrap;
 }
 
