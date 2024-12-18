@@ -58,11 +58,39 @@ function handleSubmit(event) {
     const formData = new FormData(form);
     let data = Object.fromEntries(formData);
     data = addOrderNumber(data);
-    const paymentButton = document.querySelector('.payment_button.selected_button');
-    data.payment = paymentButton.title;
-    const downloadButton = document.querySelector('.download_button.selected_button');
-    data.download = downloadButton.title;
     data.products = getProducts();
+    try {
+        const paymentButton = document.querySelector('.payment_button.selected_button');
+        data.payment = paymentButton.title;
+    } catch (e) {
+        console.error('Error getting payment method:', e);
+        if (language === 'de') {
+            alert("Bitte wählen Sie eine Zahlungsmethode bevor Sie die Bestellung abschicken.");
+        } else {
+            alert("Please select a payment method before submitting the order.");
+        }
+        event.preventDefault();
+        return;
+    }
+
+    try {
+        const downloadButton = document.querySelector('.download_button.selected_button');
+        data.download = downloadButton.title;
+    } catch (e) {
+        console.error('Error getting download method:', e);
+        //check if the products include the word 'download' and send an alert if true
+        if (data.products.includes('download')) {
+            if (language === 'de') {
+                alert("Bitte wählen Sie eine Downloadmethode bevor Sie die Bestellung abschicken.");
+            } else {
+                alert("Please select a download method before submitting the order.");
+            }
+            event.preventDefault();
+            return;
+        }
+    }
+    
+    
 
     console.log(data);
     sendEmail(data);
@@ -130,3 +158,8 @@ function selectDownload(button) {
     downloadButtons.forEach(button => button.classList.remove('selected_button'));
     button.classList.add('selected_button');
 }
+
+function decodeString(String) {
+    return decodeURIComponent(String);
+}
+
