@@ -148,7 +148,6 @@ function handleSubmit(event) {
         }
         event.preventDefault();
         hideSpinner();
-        loadCart();
         return;
     }
 
