@@ -15,6 +15,14 @@ function sendEmail(data) {
     .then(response => response.json())
     .then(result => {
         console.log("Erfolgreich gesendet:", result);
+        //get Language Cookie
+        const language = getCookie('language');
+
+        if (language === 'de') {
+            alert("Ihre Bestellung wurde erfolgreich gesendet. Wie nehmen in Kürze Kontakt mit Ihnen auf um die Bestellung abzuschließen. Bitte haben Sie etwas Geduld.");
+        } else {
+            alert("Your order has been successfully sent. We will contact you shortly to complete the order. Please be patient.");
+        }
     })
     .catch(error => {
         console.error("Fehler beim Senden der E-Mail:", error);
