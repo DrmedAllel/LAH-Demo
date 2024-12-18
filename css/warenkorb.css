@@ -94,9 +94,16 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    width: 40em;
+    width: 100%;
     margin-bottom: 1em;
     gap: 1em;
+}
+
+.form-group_download{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .input_form {
@@ -116,7 +123,7 @@ h2 {
 }
 
 .note {
-    width: 100%;
+    width: 70%;
     text-align: left;
     margin-bottom: 1em;
     font-size: 0.75em;
