@@ -1,4 +1,7 @@
 function sendEmail(data) {
+    //get Language Cookie
+    const language = getCookie('language');
+
     const scriptURL = "https://script.google.com/macros/s/AKfycby4Tye_-dBTCHBsU9Utf9mG4S4ArfEaXC-IV30tUn1QwUwYv7HiCzZZ3MQ3u10qvW6Bnw/exec";
     fetch(scriptURL, {
         redirect: "follow",
@@ -15,8 +18,6 @@ function sendEmail(data) {
     .then(response => response.json())
     .then(result => {
         console.log("Erfolgreich gesendet:", result);
-        //get Language Cookie
-        const language = getCookie('language');
 
         if (language === 'de') {
             alert("Ihre Bestellung wurde erfolgreich gesendet. Wie nehmen in Kürze Kontakt mit Ihnen auf um die Bestellung abzuschließen. Bitte haben Sie etwas Geduld.");
@@ -26,6 +27,11 @@ function sendEmail(data) {
     })
     .catch(error => {
         console.error("Fehler beim Senden der E-Mail:", error);
+        if (language === 'de') {
+            alert("Es gab einen Fehler beim Senden Ihrer Bestellung. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.");
+        } else {
+            alert("There was an error sending your order. Please try again or contact us directly.");
+        }
     });
 }
 
