@@ -156,14 +156,22 @@ function getProducts() {
 
 function selectPayment(button) {
     const paymentButtons = document.querySelectorAll('.payment_button');
-    paymentButtons.forEach(button => button.classList.remove('selected_button'));
-    button.classList.add('selected_button');
+    if (button.classList.contains('selected_button')) {
+        button.classList.remove('selected_button');
+    } else {
+        paymentButtons.forEach(button => button.classList.remove('selected_button'));
+        button.classList.add('selected_button');
+    }
 }
 
 function selectDownload(button) {
     const downloadButtons = document.querySelectorAll('.download_button');
-    downloadButtons.forEach(button => button.classList.remove('selected_button'));
-    button.classList.add('selected_button');
+    if (button.classList.contains('selected_button')) {
+        button.classList.remove('selected_button');
+    } else {
+        downloadButtons.forEach(button => button.classList.remove('selected_button'));
+        button.classList.add('selected_button');
+    }
 }
 
 function decodeString(String) {
