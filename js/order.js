@@ -1,5 +1,5 @@
 function sendEmail() {
-    const scriptURL = "https://script.google.com/macros/s/AKfycbw0vA7M3zkd7JahUEQgsxRhDcieZ-Zkeq5Z64Wc79O3WWIKYJHZjc3B33YAzzSz8cYsgA/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxUWucC-HIA43zbuhzzM3LVAi_FYCLOcgreBFc60ix0Eutk9UEEE19PEIp9K3qmAyKX-Q/exec";
     fetch(scriptURL, {
         redirect: "follow",
         method: "POST",
