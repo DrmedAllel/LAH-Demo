@@ -313,7 +313,7 @@ function checkDownload() {
         for (let item of cartItems) {
             if (item.type === 'download') {
                 //make visible the download form
-                formGroupDownload.style.display = 'flex';
+                formGroupDownload.style.display = 'block';
                 return;
             }
         }
