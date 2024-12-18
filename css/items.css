@@ -60,6 +60,13 @@ main {
     height: 4em;
 }
 
+.title_images img{
+    width: auto;
+    height: min(10em, 15vw);
+    transition: 0.25s;
+    border: 1px solid #000;
+}
+
 .item{
     border: 1px solid var(--card-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

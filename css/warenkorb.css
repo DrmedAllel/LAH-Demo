@@ -46,6 +46,8 @@ h1 {
 
     .cart {
         max-height: 30%;
+        height: auto;
+        overflow-y: scroll;
     }
 
     #submit {
