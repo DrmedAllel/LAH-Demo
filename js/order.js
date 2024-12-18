@@ -40,6 +40,19 @@ function sendEmail(data) {
 }
 
 function handleSubmit(event) {
+    //get language cookie
+    const language = getCookie('language');
+
+    if (getProducts() === '') {
+        if (language === 'de') {
+            alert("Bitte fügen Sie Produkte zum Warenkorb hinzu bevor Sie die Bestellung abschicken.");
+        } else {
+            alert("Please add products to the cart before submitting the order.");
+        }
+        event.preventDefault();
+        return;
+    }
+
     event.preventDefault();
     const form = event.target;
     const formData = new FormData(form);
