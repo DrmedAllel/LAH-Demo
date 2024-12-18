@@ -51,7 +51,7 @@ h1 {
         overflow-y: scroll;
     }
 
-    #submit {
+    .note:last-of-type {
         margin-bottom: 7em;
     }
 }
