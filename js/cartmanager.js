@@ -45,21 +45,97 @@ function removeFromCart(itemId, button) {
     //delete the cookie
     removeLocalStorageItem(itemId);
 
-    //remove the class remove-from-cart from the button
-    button.classList.remove('remove-from-cart');
+    if (button) {
+        //remove the class remove-from-cart from the button
+        button.classList.remove('remove-from-cart');
+
+        const language = getCookie('language');
+
+        //Change the button text to add to cart
+        if (language === 'de') {
+            button.innerHTML = 'In den Warenkorb';
+        } else {
+            button.innerHTML = 'Add to Cart';
+        }
+    } else {
+        console.error('Button is undefined');
+    }
 
     console.log(`Item removed from cart: ${itemId}`);
+}
 
-
-    const language = getCookie('language');
-
-
-    //Change the button text to add to cart
-    if (language === 'de') {
-        button.innerHTML = 'In den Warenkorb';
+function editCartItem(itemId, itemName, itemPrice, itemType, button) {
+    // Check if the item is in the cart
+    if (localStorage.getItem(itemId)) {
+        removeFromCart(itemId, button);
     } else {
-        button.innerHTML = 'Add to Cart';
+        addToCart(itemId, itemName, itemPrice, itemType, button);
     }
+
+    loadCart();
+}
+
+window.onload = function() {
+    loadCart();
+}
+
+function loadCart() {
+    console.log('Loading cart...');
+    // Get all items from localStorage beginning with LAH- and add them to a list
+    const cartItems = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('LAH-')) {
+            try {
+                const jsonString = localStorage.getItem(key);
+                const item = JSON.parse(jsonString);
+                if (item && item.id && item.name && item.price) {
+                    cartItems.push(item);
+                } else {
+                    console.error('Invalid item structure:', item);
+                }
+            } catch (e) {
+                console.error('Error parsing JSON from localStorage:', e);
+                console.error('Key:', key);
+            }
+        }
+    }
+
+    // Get all cart elements
+    const carts = document.getElementsByClassName('cart');
+
+    // Loop through each cart element
+    Array.from(carts).forEach(cart => {
+        // Remove all children of the cart element
+        while (cart.firstChild) {
+            cart.removeChild(cart.firstChild);
+        }
+    });
+
+    Array.from(carts).forEach(cart => {
+        // Add each item to the cart
+        for (let item of cartItems) {
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+            <div class="ItemRow">
+                <h3 class="ItemTitle">${item.name}</h3>
+                <p class="ItemID">ID: ${item.id}</p>
+            </div>
+            <div class="ItemRow">
+                <select class="item-options">
+                    <option value="download" selected>Download</option>
+                    <option value="dvd">DVD</option>
+                    <option value="book">Book</option>
+                </select>
+
+                <p class="ItemPrice">${item.price} €</p>
+            </div>
+            <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', this);">×</button>
+            `;
+            cart.appendChild(cartItem);
+        }
+    });
 }
 
 
@@ -114,18 +190,17 @@ function loadCart() {
             cartItem.innerHTML = `
             <div class="ItemRow">
                 <h3 class="ItemTitle">${item.name}</h3>
-                <p class="ItemID">ID: ${item.id}</p>
-            </div>
-            <div class="ItemRow">
                 <select class="item-options">
                     <option value="download">Download</option>
                     <option value="dvd">DVD</option>
                     <option value="book">Book</option>
                 </select>
-
+            </div>
+            <div class="ItemRow">
+                <p class="ItemID">ID: ${item.id}</p>
                 <p class="ItemPrice">${item.price}</p>
             </div>
-            <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', this);">×</button>
+            <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', '${item.option}', this);">×</button>
             `;
             cart.appendChild(cartItem);
             let selectedOption = item.type;

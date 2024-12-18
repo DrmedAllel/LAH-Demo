@@ -48,3 +48,15 @@ function sendMail(formData, items) {
     const mailtoLink = `mailto:info@luftfahrt-archiv-hafner.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
 }
+
+function selectPayment(button) {
+    const paymentButtons = document.querySelectorAll('.payment_button');
+    paymentButtons.forEach(button => button.classList.remove('selected_button'));
+    button.classList.add('selected_button');
+}
+
+function selectDownload(button) {
+    const downloadButtons = document.querySelectorAll('.download_button');
+    downloadButtons.forEach(button => button.classList.remove('selected_button'));
+    button.classList.add('selected_button');
+}

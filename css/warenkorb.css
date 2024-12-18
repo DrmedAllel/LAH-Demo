@@ -1,8 +1,13 @@
+html {
+    height: 100%;
+}
+
 main {
     margin-top: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 85%;
 }
 
 h1 {
@@ -24,68 +29,109 @@ h1 {
     flex-direction: row;
     align-items: top;
     justify-content: space-around;
-    width: auto;
+    width: 100%;
+    height: 100%;
     gap: 10em;
-    /* add border between the items */
 }
 
-#items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-
-#div_add_remove_buttons button {
-    width: 2em;
-    height: 2em;
-}
-
-#zip, #housenumber {
-    width: 5em;
-}
-
-#city, #street {
-    width: 15em;
-}
-
-#name, #prename, #email, #country {
-    width: 21em;
-}
-
-#country_div {
-    margin-bottom: 6em;
-}
-
-#error-message-bigger10 {
-    color: red;
-    font-size: 0.8em;
-    margin-top: 0.5em;
-}
-
-#submit{
-    margin-top: 5em;
-}
-
-input, button, #comments {
+.right-side {
     background-color: var(--card-color);
-    border: 1px solid var(--text-color);
-    border-radius: 0.5em;
+    width: 50%;
+    height: 100%;
 }
 
-#comment-group {
-    margin-top: 5em;
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+    height: 100%;
+}
+
+.input_form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: auto;
+    height: 100%;
 }
 
-#comments {
-    width: 30em;
-    height: 10em;
+.input_form h2 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1em;
+    font-size: 1.25em;
+    font-weight: 550;
 }
+
+.note {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1em;
+    font-size: 0.75em;
+    font-weight: 300;
+    color: var(--card-color);
+    word-break: break-word;
+    transition: 0.25s;
+}
+
+.note:hover {
+    color: var(--text-color);
+    transition: 0.25s;
+}
+
+.standard_input {
+    width: 100%;
+    height: 3em;
+    font-size: 1em;
+    border-radius: 0.5em;
+    border: 1px solid var(--card-color);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.button {
+    background-color: var(--background-color);
+    border: 2px solid transparent;
+    color: var(--text-color);
+    font-size: 1em;
+    font-weight: 700;
+    width: 100%;
+    height: 3em;
+    border-radius: 0.7em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.25s;
+}
+
+#paypal {
+    background-color: #F2BA36;
+}
+
+#wetransfer {
+    background-color: #2D82E0;
+}
+
+.selected_button {
+    border: 2px solid var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#submit {
+    margin-top: 4em;
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+
+/* CART */
 
 .cart-item {
     display: flex;
@@ -113,23 +159,21 @@ input, button, #comments {
 
 .ItemTitle {
     font-size: 1em;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .ItemPrice {
-    font-size: 1em;
+    font-size: 0.75em;
+    color: var(--text-color);
+    font-weight: 100;
 }
 
 .ItemID {
-    font-size: 1em;
-    color: var(--card-color);
-    transition: 0.25s;
+    font-size: 0.75em;
+    color: var(--text-color);
+    font-weight: 100;
 }
 
-.ItemID:hover {
-    color: var(--text-color);
-    transition: 0.25s;
-}
 
 .item-options {
     font-size: 1em;
