@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </form>
     `;
-    main.innerHTML = formHTML;
+    main.innerHTML = main.innerHTML + formHTML;
 });
                     
 
