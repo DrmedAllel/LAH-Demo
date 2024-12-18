@@ -24,6 +24,10 @@ function sendEmail(data) {
         } else {
             alert("Your order has been successfully sent. We will contact you shortly to complete the order. Please be patient.");
         }
+        //Clear the form
+        document.getElementById('orderForm').reset();
+        //Clear the cart
+        clearCart();
     })
     .catch(error => {
         console.error("Fehler beim Senden der E-Mail:", error);

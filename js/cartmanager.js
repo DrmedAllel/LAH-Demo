@@ -65,6 +65,22 @@ function removeFromCart(itemId, button) {
     console.log(`Item removed from cart: ${itemId}`);
 }
 
+function clearCart() {
+    // Clear all items from localStorage beginning with LAH-
+    const keysToRemove = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('LAH-')) {
+            keysToRemove.push(key);
+        }
+    }
+
+    keysToRemove.forEach(key => localStorage.removeItem(key));
+
+    console.log('Cart cleared');
+    loadCart();
+}
+
 function editCartItem(itemId, itemName, itemPrice, itemType, itemImage, button) {
     // Check if the item is in the cart
     if (localStorage.getItem(itemId)) {
