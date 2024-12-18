@@ -44,6 +44,7 @@ h1 {
         width: 80%;
     }
 
+
     .cart {
         max-height: 30%;
         height: auto;
@@ -180,6 +181,10 @@ h2 {
 
 
 /* CART */
+
+.right-side h2 {
+    width: 80%;
+}
 
 .cart{
     display: flex;
