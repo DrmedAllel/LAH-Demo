@@ -102,14 +102,8 @@ h1 {
     margin-bottom: 1em;
     font-size: 0.75em;
     font-weight: 300;
-    color: var(--card-color);
-    word-break: break-word;
-    transition: 0.25s;
-}
-
-.note:hover {
     color: var(--text-color);
-    transition: 0.25s;
+    word-break: break-word;
 }
 
 .standard_input {
@@ -194,12 +188,35 @@ h1 {
     margin-bottom: 1em;
 }
 
+.cart-item-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 3em;
+}
+
 .ItemRow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.ItemColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ItemImage {
+    width: auto;
+    height: 7em;
+    border: 1px solid #000;
 }
 
 .ItemTitle {
@@ -227,7 +244,7 @@ h1 {
 
 .add-to-cart{
     background-color: var(--background-color);
-    border: 1px solid var(--card-color);
+    border: 1px solid transparent;
     color: var(--card-color);
     margin-left: auto;
     font-size: 1em;
@@ -244,7 +261,6 @@ h1 {
     background-color: var(--cancel-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     color: var(--text-color);
-    border: 1px solid var(--text-color);
 }
 
 #stripe {

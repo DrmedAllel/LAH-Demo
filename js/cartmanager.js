@@ -192,21 +192,23 @@ function loadCart() {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
-            <div class="ItemRow">
-            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-                <div class="ItemRow">
-                    <h3 class="ItemTitle">${item.name}</h3>
-                    <select class="item-options">
-                        <option value="download">Download</option>
-                        <option value="dvd">DVD</option>
-                        <option value="book">Book</option>
-                    </select>
+            <div class="ItemRow cart-item-row">
+                <img src="${item.image}" alt="${item.name}" class="ItemImage">
+                <div class="ItemColumn">
+                    <div class="ItemRow">
+                        <h3 class="ItemTitle">${item.name}</h3>
+                        <select class="item-options">
+                            <option value="download">Download</option>
+                            <option value="dvd">DVD</option>
+                            <option value="book">Book</option>
+                        </select>
+                    </div>
+                    <div class="ItemRow">
+                        <p class="ItemID">ID: ${item.id}</p>
+                        <p class="ItemPrice">${item.price}</p>
+                    </div>
+                    <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', '${item.option}', this);">×</button>
                 </div>
-                <div class="ItemRow">
-                    <p class="ItemID">ID: ${item.id}</p>
-                    <p class="ItemPrice">${item.price}</p>
-                </div>
-                <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', '${item.option}', this);">×</button>
             </div>
             `;
             cart.appendChild(cartItem);
