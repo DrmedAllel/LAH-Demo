@@ -28,6 +28,8 @@ function sendEmail(data) {
         document.getElementById('orderForm').reset();
         //Clear the cart
         clearCart();
+        //Hide the spinner
+        hideSpinner();
     })
     .catch(error => {
         console.error("Fehler beim Senden der E-Mail:", error);
@@ -36,10 +38,12 @@ function sendEmail(data) {
         } else {
             alert("There was an error sending your order. Please try again or contact us directly.");
         }
+        hideSpinner();
     });
 }
 
 function handleSubmit(event) {
+    displaySpinner();
     //get language cookie
     const language = getCookie('language');
 
@@ -50,6 +54,7 @@ function handleSubmit(event) {
             alert("Please add products to the cart before submitting the order.");
         }
         event.preventDefault();
+        hideSpinner();
         return;
     }
 
@@ -70,6 +75,7 @@ function handleSubmit(event) {
             alert("Please select a payment method before submitting the order.");
         }
         event.preventDefault();
+        hideSpinner();
         return;
     }
 
@@ -86,6 +92,7 @@ function handleSubmit(event) {
                 alert("Please select a download method before submitting the order.");
             }
             event.preventDefault();
+            hideSpinner();
             return;
         }
     }
@@ -162,4 +169,3 @@ function selectDownload(button) {
 function decodeString(String) {
     return decodeURIComponent(String);
 }
-

@@ -285,4 +285,22 @@ function clearLocalStorage() {
   localStorage.clear();
 }
 
+function displaySpinner() {
+  //get element with the id spinner
+  const spinner = document.getElementById('spinner');
+  //remove class spinner_invisible from the spinner element
+  spinner.classList.remove('spinner_invisible');
+  //add class spinner_visible to the spinner element
+  spinner.classList.add('spinner_visible');
+}
+
+function hideSpinner() {
+  //get element with the id spinner
+  const spinner = document.getElementById('spinner');
+  //remove class spinner_visible from the spinner element
+  spinner.classList.remove('spinner_visible');
+  //add class spinner_invisible to the spinner element
+  spinner.classList.add('spinner_invisible');
+}
+
 

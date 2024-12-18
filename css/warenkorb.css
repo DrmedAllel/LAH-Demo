@@ -25,7 +25,7 @@ h1 {
     }
 
     .left-side, .right-side {
-        width: 80%;
+        width: auto;
         padding-left: 10%;
         padding-right: 10%;
         align-items: center;
