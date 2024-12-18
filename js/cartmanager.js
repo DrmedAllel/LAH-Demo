@@ -1,9 +1,10 @@
-function addToCart(itemId, itemName, itemPrice, itemType, button) {
+function addToCart(itemId, itemName, itemPrice, itemType, itemImage, button) {
     const cartItem = {
         id: itemId,
         name: itemName,
         price: itemPrice,
-        type: itemType
+        type: itemType,
+        image: itemImage
     };
 
     // Convert the cart item to a JSON string
@@ -64,12 +65,12 @@ function removeFromCart(itemId, button) {
     console.log(`Item removed from cart: ${itemId}`);
 }
 
-function editCartItem(itemId, itemName, itemPrice, itemType, button) {
+function editCartItem(itemId, itemName, itemPrice, itemType, itemImage, button) {
     // Check if the item is in the cart
     if (localStorage.getItem(itemId)) {
         removeFromCart(itemId, button);
     } else {
-        addToCart(itemId, itemName, itemPrice, itemType, button);
+        addToCart(itemId, itemName, itemPrice, itemType, itemImage, button);
     }
 
     loadCart();
@@ -139,12 +140,12 @@ function loadCart() {
 }
 
 
-function editCartItem(itemId, itemName, itemPrice, itemType, button) {
+function editCartItem(itemId, itemName, itemPrice, itemType, itemImage, button) {
     // Check if the item is in the cart
     if (localStorage.getItem(itemId)) {
         removeFromCart(itemId, button);
     } else {
-        addToCart(itemId, itemName, itemPrice, itemType, button);
+        addToCart(itemId, itemName, itemPrice, itemType, itemImage, button);
     }
 
     loadCart();
@@ -192,18 +193,21 @@ function loadCart() {
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
             <div class="ItemRow">
-                <h3 class="ItemTitle">${item.name}</h3>
-                <select class="item-options">
-                    <option value="download">Download</option>
-                    <option value="dvd">DVD</option>
-                    <option value="book">Book</option>
-                </select>
+            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                <div class="ItemRow">
+                    <h3 class="ItemTitle">${item.name}</h3>
+                    <select class="item-options">
+                        <option value="download">Download</option>
+                        <option value="dvd">DVD</option>
+                        <option value="book">Book</option>
+                    </select>
+                </div>
+                <div class="ItemRow">
+                    <p class="ItemID">ID: ${item.id}</p>
+                    <p class="ItemPrice">${item.price}</p>
+                </div>
+                <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', '${item.option}', this);">×</button>
             </div>
-            <div class="ItemRow">
-                <p class="ItemID">ID: ${item.id}</p>
-                <p class="ItemPrice">${item.price}</p>
-            </div>
-            <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', '${item.option}', this);">×</button>
             `;
             cart.appendChild(cartItem);
             let selectedOption = item.type;

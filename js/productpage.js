@@ -61,12 +61,15 @@ window.onload = function () {
         const ItemPrice = item.getElementsByClassName('price')[0].innerText;
         let ItemID = item.getElementsByClassName('item-number')[0].innerText;
         ItemID = ItemID.split(': ')[1];
-
+        
+        // Check if the item_image element exists
+        const itemImageElement = item.getElementsByClassName('image_item')[0];
+        const ItemImage = itemImageElement ? itemImageElement.src : '';
 
         const button = document.createElement('button');
         button.className = 'add-to-cart';
         button.id = ItemID;
-        button.setAttribute('onclick', `editCartItem('${ItemID}', '${ItemTitle}', '${ItemPrice}', 'download', this)`);
+        button.setAttribute('onclick', `editCartItem('${ItemID}', '${ItemTitle}', '${ItemPrice}', 'download', '${ItemImage}', this)`);
         button.innerHTML = language === 'de' ? 'In den Warenkorb' : 'Add to Cart';
         item.appendChild(button);
     }
