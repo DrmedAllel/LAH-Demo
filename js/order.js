@@ -72,7 +72,7 @@ function generateMessage(data) {
     message += `Download: ${data.download}\n\n\n`;
     message += `Zahlung: ${data.payment}\n`;
     message += `Bestellung:\n\n`;
-    message += `Produkte:\n${data.products}\n`;
+    message += `${data.products}\n`;
     return message;
 }
 
