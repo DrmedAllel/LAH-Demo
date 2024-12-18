@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // add navigation to the header
-    const header = document.querySelector('header');
-    if (header) {
-        const language = getCookie('language');
-        if (language === 'de') {
-            header.innerHTML = `
-            <h1><a href="/LAH-Demo/index.html" title="Startseite">Luftfahrt-Archiv Hafner</a></h1>
-            <p>gegr. 1990</p>
-            <nav>
-              <div class="dropdown">
-              <h2 class="title">Flugzeuge</h2>
+  // add navigation to the header
+  const header = document.querySelector('header');
+  if (header) {
+      const language = getCookie('language');
+      header.innerHTML = `
+          <h1><a href="/LAH-Demo/index.html" title="${language === 'de' ? 'Startseite' : 'Homepage'}">Luftfahrt-Archiv Hafner</a></h1>
+          <p>${language === 'de' ? 'gegr. 1990' : 'est. 1990'}</p>
+          <nav>
+            <div class="dropdown">
+              <h2 class="title">${language === 'de' ? 'Flugzeuge' : 'Aircraft'}</h2>
               <ul class="submenu">
                 <a href="/LAH-Demo/Flugzeuge/arado.html">Arado</a>
                 <a href="/LAH-Demo/Flugzeuge/ago.html">AGO</a>
@@ -27,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="/LAH-Demo/Flugzeuge/junkers.html">Junkers</a>
                 <a href="/LAH-Demo/Flugzeuge/klemm.html">Klemm</a>
                 <a href="/LAH-Demo/Flugzeuge/messerschmitt.html">Messerschmitt</a>
-                <a href="/LAH-Demo/Flugzeuge/segelflugzeuge.html">Segelflugzeuge</a>
+                <a href="/LAH-Demo/Flugzeuge/segelflugzeuge.html">${language === 'de' ? 'Segelflugzeuge' : 'Gliders'}</a>
                 <a href="/LAH-Demo/Flugzeuge/siebel.html">Siebel</a>
               </ul>
-              </div>
+            </div>
 
-              <div class="dropdown">
-              <h2 class="title">Motoren & Luftschrauben</h2>
+            <div class="dropdown">
+              <h2 class="title">${language === 'de' ? 'Motoren & Luftschrauben' : 'Engines & Propellers'}</h2>
               <ul class="submenu">
                 <a href="/LAH-Demo/Motoren_Luftschrauben/argus.html">Argus</a>
                 <a href="/LAH-Demo/Motoren_Luftschrauben/bmw.html">BMW</a>
@@ -45,91 +44,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="/LAH-Demo/Motoren_Luftschrauben/salmson.html">Salmson</a>
                 <a href="/LAH-Demo/Motoren_Luftschrauben/siemens_bramo.html">Siemens - BRAMO</a>
                 <a href="/LAH-Demo/Motoren_Luftschrauben/vdm.html">VDM</a>
-                <a href="/LAH-Demo/Motoren_Luftschrauben/vergaser_einspritzanlagen.html">Vergaser und Einspritzanlagen</a>
-                <a href="/LAH-Demo/Motoren_Luftschrauben/walter.html">Walter Motoren</a>
+                <a href="/LAH-Demo/Motoren_Luftschrauben/vergaser_einspritzanlagen.html">${language === 'de' ? 'Vergaser und Einspritzanlagen' : 'Carburetors and Injection Systems'}</a>
+                <a href="/LAH-Demo/Motoren_Luftschrauben/walter.html">Walter ${language === 'de' ? 'Motoren' : 'Engines'}</a>
                 <a href="/LAH-Demo/Motoren_Luftschrauben/walter_hwk.html">Walter HWK</a>
                 <a href="/LAH-Demo/Motoren_Luftschrauben/zuendapp.html">Zündapp</a>
               </ul>
-              </div>
+            </div>
 
-              <div class="dropdown">
-              <a class="title" href="/LAH-Demo/Zusatz/flugzeug_bewaffnung.html">Flugzeug-Bewaffnung</a>
-              </div>
+            <div class="dropdown">
+              <a class="title" href="/LAH-Demo/Zusatz/flugzeug_bewaffnung.html">${language === 'de' ? 'Flugzeug-Bewaffnung' : 'Aircraft Armament'}</a>
+            </div>
 
-              <div class="dropdown">
-              <a class="title" href="/LAH-Demo/Zusatz/flugzeug_ausruestung.html">Flugzeug-Ausrüstung</a>
-              </div>
+            <div class="dropdown">
+              <a class="title" href="/LAH-Demo/Zusatz/flugzeug_ausruestung.html">${language === 'de' ? 'Flugzeug-Ausrüstung' : 'Aircraft Equipment'}</a>
+            </div>
 
-              <div class="dropdown">
-              <a class="title cart_link" href="/LAH-Demo/warenkorb.html">Warenkorb</a>
-              </div>
-
-            </nav>
-              `;
-        } else {
-          header.innerHTML = `
-              <h1><a href="/LAH-Demo/index.html" title="Homepage">Luftfahrt-Archiv Hafner</a></h1>
-              <p>est. 1990</p>
-              <nav>
-                <div class="dropdown">
-                  <h2 class="title">Aircraft</h2>
-                  <ul class="submenu">
-                    <a href="/LAH-Demo/Flugzeuge/arado.html">Arado</a>
-                    <a href="/LAH-Demo/Flugzeuge/ago.html">AGO</a>
-                    <a href="/LAH-Demo/Flugzeuge/blohm_voss.html">Blohm & Voss</a>
-                    <a href="/LAH-Demo/Flugzeuge/bücker.html">Bücker</a>
-                    <a href="/LAH-Demo/Flugzeuge/dfs.html">DFS</a>
-                    <a href="/LAH-Demo/Flugzeuge/dornier.html">Dornier</a>
-                    <a href="/LAH-Demo/Flugzeuge/erla.html">Erla</a>
-                    <a href="/LAH-Demo/Flugzeuge/fieseler.html">Fieseler</a>
-                    <a href="/LAH-Demo/Flugzeuge/focke-achgelis.html">Focke-Achgelis</a>
-                    <a href="/LAH-Demo/Flugzeuge/focke_wulf.html">Focke Wulf</a>
-                    <a href="/LAH-Demo/Flugzeuge/gotha.html">Gotha</a>
-                    <a href="/LAH-Demo/Flugzeuge/heinkel.html">Heinkel</a>
-                    <a href="/LAH-Demo/Flugzeuge/henschel.html">Henschel</a>
-                    <a href="/LAH-Demo/Flugzeuge/junkers.html">Junkers</a>
-                    <a href="/LAH-Demo/Flugzeuge/klemm.html">Klemm</a>
-                    <a href="/LAH-Demo/Flugzeuge/messerschmitt.html">Messerschmitt</a>
-                    <a href="/LAH-Demo/Flugzeuge/segelflugzeuge.html">Gliders</a>
-                    <a href="/LAH-Demo/Flugzeuge/siebel.html">Siebel</a>
-                  </ul>
-                </div>
-
-                <div class="dropdown">
-                  <h2 class="title">Engines & Propellers</h2>
-                  <ul class="submenu">
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/argus.html">Argus</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/bmw.html">BMW</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/daimler_benz.html">Daimler Benz</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/gnome_rhone.html">Gnome Rhone</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/hirth.html">Hirth</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/jumo.html">JUMO</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/oberursel.html">Oberursel</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/salmson.html">Salmson</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/siemens_bramo.html">Siemens - BRAMO</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/vdm.html">VDM</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/vergaser_einspritzanlagen.html">Carburetors and Injection Systems</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/walter.html">Walter Engines</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/walter_hwk.html">Walter HWK</a>
-                    <a href="/LAH-Demo/Motoren_Luftschrauben/zuendapp.html">Zündapp</a>
-                  </ul>
-                </div>
-
-                <div class="dropdown">
-                  <a class="title" href="/LAH-Demo/Zusatz/flugzeug_bewaffnung.html">Aircraft Armament</a>
-                </div>
-
-                <div class="dropdown">
-                  <a class="title" href="/LAH-Demo/Zusatz/flugzeug_ausruestung.html">Aircraft Equipment</a>
-                </div>
-
-                <div class="dropdown">
-                  <a class="title cart_link" href="/LAH-Demo/warenkorb.html">Cart</a>
-                </div>
-              </nav>
-            `;
-        }
-    }
+            <div class="dropdown">
+              <a class="title cart_link" href="/LAH-Demo/warenkorb.html">${language === 'de' ? 'Warenkorb' : 'Cart'}</a>
+            </div>
+          </nav>
+      `;
+  }
 });
 
 
@@ -151,21 +86,13 @@ document.addEventListener('DOMContentLoaded', function() {
   // add the language selection to the page
   const main = document.querySelector('main');
   if (main) {
-      if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('/warenkorb.html')) {
-        main.innerHTML = `
+      const languageSelectionHTML = `
         <div id="language_selection">
-          <img src="images/language_selection/germany.png" alt="Germany Flag" id="germany_flag" class="flag flag_active" title="Seite auf Deutsch">
-          <img src="images/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="Page in English">
+          <img src="${window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('/warenkorb.html') ? 'images' : '../images'}/language_selection/germany.png" alt="Germany Flag" id="germany_flag" class="flag flag_active" title="${language === 'de' ? 'Seite auf Deutsch' : 'Page in English'}">
+          <img src="${window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('/warenkorb.html') ? 'images' : '../images'}/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="${language === 'de' ? 'Seite auf Deutsch' : 'Page in English'}">
         </div>
-        ` + main.innerHTML;
-      } else {
-        main.innerHTML = `
-        <div id="language_selection">
-          <img src="../images/language_selection/germany.png" alt="Germany Flag" id="germany_flag" class="flag flag_active" title="Seite auf Deutsch">
-          <img src="../images/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="Page in English">
-        </div>
-        ` + main.innerHTML;
-      }
+      `;
+      main.innerHTML = languageSelectionHTML + main.innerHTML;
   }
 });
     
