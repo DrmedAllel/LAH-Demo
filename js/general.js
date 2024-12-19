@@ -72,13 +72,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // add footer to the page
     const footer = document.querySelector('footer');
     if (footer) {
-        footer.innerHTML = `
-    <p>Luftfahrt-Archiv Hafner, Udo Hafner, gegr. 1990</p>
-    <a href="/LAH-Demo/agb.html">AGB</a> 
-    <a href="/LAH-Demo/links.html">Links</a> 
-    <a href="/LAH-Demo/about.html">Wir über uns</a>
-    <a href="/LAH-Demo/impressum.html">Impressum</a>
-        `;
+      const language = getCookie('language');
+      footer.innerHTML = `
+    <p>Luftfahrt-Archiv Hafner, Udo Hafner, ${language === 'de' ? 'gegr. 1990' : 'est. 1990'}</p>
+    <a href="/LAH-Demo/agb.html">${language === 'de' ? 'AGB' : 'Terms'}</a> 
+    <a href="/LAH-Demo/links.html">${language === 'de' ? 'Links' : 'Links'}</a> 
+    <a href="/LAH-Demo/about.html">${language === 'de' ? 'Wir über uns' : 'About Us'}</a>
+    <a href="/LAH-Demo/impressum.html">${language === 'de' ? 'Impressum' : 'Imprint'}</a>
+      `;
     }
 });
 
