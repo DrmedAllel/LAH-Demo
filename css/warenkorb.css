@@ -9,6 +9,7 @@ main {
     align-items: center;
     height: 80%;
     min-width: 40em;
+    width: 100vw
 }
 
 h1 {
@@ -20,30 +21,28 @@ h1 {
     #orderForm {
         display: flex;
         flex-direction: column-reverse;
-        width: 100%;
-        padding-left: 5em;
-        padding-right: 5em;
         align-items: center;
         justify-content: center;
     }
 
     .left-side, .right-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding-left: 10%;
         padding-right: 10%;
+        width: 100%;
         align-items: center;
         justify-content: center;
         height: auto;
     }
 
     .right-side{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: flex-start;
         background-color: var(--card-color);
         height: auto;
         overflow-y: scroll;
-        width: 80%;
+        width: 100%;
     }
 
 
