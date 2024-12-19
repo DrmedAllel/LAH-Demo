@@ -199,6 +199,10 @@ h2 {
     color: #FFF;
 }
 
+#onedrive p {
+    color: var(--text-color);
+}
+
 .download_button svg {
     display: block;
 }
