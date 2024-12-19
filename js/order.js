@@ -200,7 +200,7 @@ function generateMessage(data) {
     message += `Land: ${data.country}\n`;
     message += `Download: ${data.download}\n`;
     message += `Zahlung: ${data.payment}\n`;
-    message += `Zusätzliche Informationen:${data.additional_info}\n\n\n`;
+    message += `Zusätzliche Informationen: ${data.additional_info}\n\n\n`;
     message += `Bestellung:\n\n`;
     message += `${data.products}\n`;
     return message;
