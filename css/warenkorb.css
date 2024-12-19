@@ -143,6 +143,19 @@ h2 {
     appearance: none;
 }
 
+#additional_info {
+    width: 100%;
+    height: 6em;
+    font-size: 1em;
+    border-radius: 0.5em;
+    border: 1px solid var(--card-color);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    -webkit-appearance: none;
+    appearance: none;
+    resize: none;
+}
+
 .button {
     display: flex;
     flex-direction: row;

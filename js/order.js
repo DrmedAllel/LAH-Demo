@@ -53,6 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     <button type="button" class="payment_button button" id="bank_transfer" title="BankTransfer" onclick="selectPayment(this)">${language === 'de' ? 'Überweisung' : 'Bank Transfer'}</button>
                 </div>
 
+                <h2>${language === 'de' ? 'Zusätzliche Informationen' : 'Additional Information'}</h2>
+                <div class="form-group">
+                    <textarea id="additional_info" name="additional_info" placeholder="${language === 'de' ? 'Zusätzliche Informationen (optional)' : 'Additional Information (optional)'}" class="standard_input"></textarea>
+                </div>
+
                 <div class="form-group">
                     <button type="submit" class="submit_button button" id="submit">${language === 'de' ? 'Bestellung abschicken' : 'Submit'}</button>
                 </div>
@@ -194,7 +199,8 @@ function generateMessage(data) {
     message += `Ort: ${data.city}\n`;
     message += `Land: ${data.country}\n`;
     message += `Download: ${data.download}\n`;
-    message += `Zahlung: ${data.payment}\n\n\n`;
+    message += `Zahlung: ${data.payment}\n`;
+    message += `Zusätzliche Informationen:${data.additional_info}\n\n\n`;
     message += `Bestellung:\n\n`;
     message += `${data.products}\n`;
     return message;
