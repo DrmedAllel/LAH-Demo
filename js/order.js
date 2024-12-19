@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <h2>${language === 'de' ? 'Warenkorb' : 'Cart'}</h2>
             <div class="cart"></div>
             <div id="stripe"></div>
+            <p class="note">${language === 'de' ? 'Die Preise können von den tatsächlichen Preisen abweichen. Die zu bezahlende Summe wird Ihnen nach Absenden der Bestellung in der zugesandten Rechnung angezeigt.' : 'Prices may differ from the actual prices. The amount to be paid will be shown to you in the invoice sent after submitting the order.'}</p>
+            <h2 id="subtotal">${language === 'de' ? 'Summe:' : 'Total:'}</h2>
         </div>
     </form>
     `;

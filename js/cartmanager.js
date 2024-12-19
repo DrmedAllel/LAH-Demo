@@ -97,81 +97,6 @@ window.onload = function() {
 }
 
 function loadCart() {
-    console.log('Loading cart...');
-    // Get all items from localStorage beginning with LAH- and add them to a list
-    const cartItems = [];
-    for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key.startsWith('LAH-')) {
-            try {
-                const jsonString = localStorage.getItem(key);
-                const item = JSON.parse(jsonString);
-                if (item && item.id && item.name && item.price) {
-                    cartItems.push(item);
-                } else {
-                    console.error('Invalid item structure:', item);
-                }
-            } catch (e) {
-                console.error('Error parsing JSON from localStorage:', e);
-                console.error('Key:', key);
-            }
-        }
-    }
-
-    // Get all cart elements
-    const carts = document.getElementsByClassName('cart');
-
-    // Loop through each cart element
-    Array.from(carts).forEach(cart => {
-        // Remove all children of the cart element
-        while (cart.firstChild) {
-            cart.removeChild(cart.firstChild);
-        }
-    });
-
-    Array.from(carts).forEach(cart => {
-        // Add each item to the cart
-        for (let item of cartItems) {
-            const cartItem = document.createElement('div');
-            cartItem.classList.add('cart-item');
-            cartItem.innerHTML = `
-            <div class="ItemRow">
-                <h3 class="ItemTitle">${item.name}</h3>
-                <p class="ItemID">ID: ${item.id}</p>
-            </div>
-            <div class="ItemRow">
-                <select class="item-options">
-                    <option value="download" selected>Download</option>
-                    <option value="dvd">DVD</option>
-                    <option value="book">Book</option>
-                </select>
-
-                <p class="ItemPrice">${item.price} €</p>
-            </div>
-            <button class="add-to-cart" onclick="editCartItem('${item.id}', '${item.name}', '${item.price}', this);">×</button>
-            `;
-            cart.appendChild(cartItem);
-        }
-    });
-}
-
-
-function editCartItem(itemId, itemName, itemPrice, itemType, itemImage, button) {
-    // Check if the item is in the cart
-    if (localStorage.getItem(itemId)) {
-        removeFromCart(itemId, button);
-    } else {
-        addToCart(itemId, itemName, itemPrice, itemType, itemImage, button);
-    }
-
-    loadCart();
-}
-
-window.onload = function() {
-    loadCart();
-}
-
-function loadCart() {
     //Ge the Language Cookie
     const language = getCookie('language');
 
@@ -245,14 +170,18 @@ function loadCart() {
             checkDownload();
         }
     });
+
+    // Get the total price element
+    const totalPriceElement = document.querySelector('#subtotal');
+    if (totalPriceElement) {
+        totalPriceElement.innerHTML = `${language === 'de' ? 'Summe:' : 'Total:'} ${getTotalPrice()}`;
+    }
 }
 
 
 window.addEventListener('scroll', function() {
     const shoppingCart = document.querySelector('.shopping_cart');
     if (shoppingCart) {
-        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-
         if (window.scrollY >= 100) {
             shoppingCart.style.display = 'flex';
         } else {
@@ -288,7 +217,7 @@ document.addEventListener('change', function(event) {
         Item = JSON.stringify(Item);
         setLocalStorageItem(itemId, Item, 1);
     }
-    checkDownload();
+    loadCart();
 });
 
 
@@ -324,4 +253,39 @@ function checkDownload() {
     
 }
 
+function getTotalPrice() {
+    const cartItems = [];
+
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('LAH-')) {
+            try {
+                getLocalStorageItem(key);
+                cartItems.push(JSON.parse(getLocalStorageItem(key)));
+            } catch (e) {
+                console.error('Error parsing JSON from localStorage:', e);
+                console.error('Key:', key);
+            }
+        }
+    }
+
+    const language = getCookie('language');
+
+    let bookString = '';
+    let totalPrice = 0;
+    for (let item of cartItems) {
+        if (item.type !== 'book') {
+            totalPrice += parseFloat(item.price);
+        } else {
+            totalPrice += 0;
+            if (language === 'de') {
+                bookString = ' + Preis der Bücher';
+            } else {
+                bookString = '+ Price of the books';
+            }
+            
+        }
+    }
+    return `${totalPrice.toFixed(2)} € ${bookString}`;
+}
 
