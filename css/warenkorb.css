@@ -96,6 +96,7 @@ h1 {
     width: 100%;
     margin-bottom: 1em;
     gap: 1em;
+    min-width: 40em;
 }
 
 .form-group_download{
