@@ -106,8 +106,6 @@ function sendEmail(data) {
         setLocalStorageItem(data.orderNumber, JSON.stringify(data), 7);
         //Clear the cart
         clearCart();
-        //Hide the spinner
-        hideSpinner();
 
         //Redirect to the order confirmation page
         window.location.href = '/LAH-Demo/placedorder.html';
