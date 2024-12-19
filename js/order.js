@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    //include the navigation bar in the main element of the page
     const language = getCookie('language');
     const main = document.querySelector('main');
 
