@@ -100,17 +100,17 @@ function sendEmail(data) {
     .then(result => {
         console.log("Erfolgreich gesendet:", result);
 
-        if (language === 'de') {
-            alert("Ihre Bestellung wurde erfolgreich gesendet. Wie nehmen in Kürze Kontakt mit Ihnen auf um die Bestellung abzuschließen. Bitte haben Sie etwas Geduld.");
-        } else {
-            alert("Your order has been successfully sent. We will contact you shortly to complete the order. Please be patient.");
-        }
         //Clear the form
         document.getElementById('orderForm').reset();
+        //Save the order element in the local storage as a jason element
+        setLocalStorageItem(data.orderNumber, JSON.stringify(data), 7);
         //Clear the cart
         clearCart();
         //Hide the spinner
         hideSpinner();
+
+        //Redirect to the order confirmation page
+        window.location.href = '/LAH-Demo/placedorder.html';
     })
     .catch(error => {
         console.error("Fehler beim Senden der E-Mail:", error);
@@ -145,6 +145,7 @@ function handleSubmit(event) {
     let data = Object.fromEntries(formData);
     data = addOrderNumber(data);
     data.products = getProducts();
+    data.orderdate = new Date().toLocaleString();
     try {
         const paymentButton = document.querySelector('.payment_button.selected_button');
         data.payment = paymentButton.title;
