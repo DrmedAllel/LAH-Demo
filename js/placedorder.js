@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let main = document.querySelector('main');
     main.innerHTML = main.innerHTML + `
                                         <h1>${language === 'de' ? 'Vielen Dank für Ihre Bestellung' : 'Thank you for your order'}</h1>
-                                        <h2>${language === 'de' ? 'Übersicht Ihrer Bestellungen' : 'Overview of your orders'}</h2>
                                         <p>${language === 'de' ? 'Wir bearbeiten Ihre Bestellung und senden Ihnen eine Rechnung per E-Mail. Bitte haben Sie etwas Geduld.' : 'We are processing your order and will send you an invoice by email. Please be patient.'}</p>
+                                        <h2>${language === 'de' ? 'Übersicht Ihrer Bestellungen' : 'Overview of your orders'}</h2>
                                         <div id="order_container"></div>
                                         <p class="note">${language === 'de' ? 'Ihr Bestellung wird nach 7 Tagen aus der Historie gelöscht.' : 'Your order will be deleted from the history after 7 days.'}</p>
                                     `;
