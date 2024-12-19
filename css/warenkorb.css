@@ -8,6 +8,7 @@ main {
     flex-direction: column;
     align-items: center;
     height: 85%;
+    min-width: 40em;
 }
 
 h1 {
@@ -20,6 +21,8 @@ h1 {
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
+        padding-left: 5em;
+        padding-right: 5em;
         align-items: center;
         justify-content: center;
     }
@@ -45,9 +48,12 @@ h1 {
 
 
     .cart {
-        max-height: 30%;
+        max-height: 50vh;
+        min-width: 40em;
         height: auto;
         overflow-y: scroll;
+        padding-left: 5em;
+        padding-right: 5em;
     }
 
     .note:last-of-type {
@@ -85,6 +91,10 @@ h1 {
         align-items: flex-end;
         width: 50%;
         height: 100%;
+    }
+
+    .cart {
+        height: 45vh;
     }
 }
 
@@ -214,7 +224,6 @@ h2 {
     width: 100%;
     height: 100%;
     padding-top: 2em;
-    height: 45vh;
     overflow-y: scroll;
     scrollbar-width: auto;
     scrollbar-color: var(--text-color) var(--background-color);
@@ -225,7 +234,7 @@ h2 {
     flex-direction: column;
     align-items: left;
     justify-content: space-around;
-    width: 50em;
+    min-width: 40em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     margin-bottom: 1em;
@@ -308,7 +317,9 @@ h2 {
 
 #stripe {
     width: 80%;
+    min-width: 40em;
     height: 2px;
     background-color: var(--text-color);
     margin-top: 4em;
+    margin-bottom: 4em;
 }
