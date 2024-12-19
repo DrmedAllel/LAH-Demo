@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <h2>${language === 'de' ? 'Übersicht Ihrer Bestellungen' : 'Overview of your orders'}</h2>
                                         <p>${language === 'de' ? 'Wir bearbeiten Ihre Bestellung und senden Ihnen eine Rechnung per E-Mail. Bitte haben Sie etwas Geduld.' : 'We are processing your order and will send you an invoice by email. Please be patient.'}</p>
                                         <div id="order_container"></div>
-                                        <p class="note">${language === 'de' ? 'Ihr Bestellhistorie wird 7 Tage lang gespeichert und dann gelöscht.' : 'Your order history will be saved for 7 days and then deleted.'}</p>
+                                        <p class="note">${language === 'de' ? 'Ihr Bestellung wird nach 7 Tagen aus der Historie gelöscht.' : 'Your order will be deleted from the history after 7 days.'}</p>
                                     `;
 
     loadOrders('#order_container');
@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function loadOrders(identifier) {
+    const language = getCookie('language');
+
     let elementToPaste = document.querySelector(identifier);
 
     let ListOfOrders = getItemsWithHashFromLocalStorage();
@@ -44,10 +46,11 @@ function loadOrders(identifier) {
         let orderHTML = `
             <div class="order">
                 <h3 class="order_id">${orderData.orderNumber}</h3>
-                <p>${orderData.orderdate}</p>
-                <p>${orderData.payment}</p>
-                <p>${orderData.download}</p>
-                <p>${orderData.email}</p>
+                <p>Email: ${orderData.email}</p>
+                <p>${language === 'de' ? 'Datum: ' : 'Date: '} ${orderData.orderdate} ${language === 'de' ? 'Uhr' : 'o\'clock'}</p>
+                <p>${language === 'de' ? 'Zahlungsmethode: ' : 'Payment method: '} ${orderData.payment}</p>
+                <p>${language === 'de' ? 'Download-Methode: ' : 'Download method: '} ${orderData.download}</p>
+                <p>${language === 'de' ? 'Bestellung: ' : 'Order: '}</p>
                 <div class="products">
                     ${productsHTML}
                 </div>
