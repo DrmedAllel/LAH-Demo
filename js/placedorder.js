@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     main.innerHTML = main.innerHTML + `
                                         <h1 id='thank_you_header'>${language === 'de' ? 'Vielen Dank für Ihre Bestellung!' : 'Thank you for your order!'}</h1>
                                         <p>${language === 'de' ? 'Wir bearbeiten Ihre Bestellung und senden Ihnen eine Rechnung per E-Mail. Bitte haben Sie etwas Geduld.' : 'We are processing your order and will send you an invoice by email. Please be patient.'}</p>
-                                        <p>${language === 'de' ? 'Wenn Sie Fragen haben, kontaktieren Sie uns bitte unter' : 'If you have any questions, please contact us at'} <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a>.</p>
+                                        <p>${language === 'de' ? 'Wenn Sie Fragen haben, kontaktieren Sie uns bitte: ' : 'If you have any questions, please contact us: '} <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
                                         <h2>${language === 'de' ? 'Übersicht Ihrer Bestellungen' : 'Overview of your orders'}</h2>
                                         <div id="order_container"></div>
                                         <p class="note">${language === 'de' ? 'Ihr Bestellung wird nach 7 Tagen aus der Historie gelöscht.' : 'Your order will be deleted from the history after 7 days.'}</p>
