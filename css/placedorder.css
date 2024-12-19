@@ -29,3 +29,9 @@ main {
     margin-bottom: 4em;
     min-width: 40em;
 }
+
+#thank_you_header {
+    font-size: 4em;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
