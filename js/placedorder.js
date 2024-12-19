@@ -46,7 +46,7 @@ function loadOrders(identifier) {
         }
         let orderHTML = `
             <div class="order">
-                <h3 class="order_id">${orderData.orderNumber}</h3>
+                <h3 class="order_id">${language === 'de' ? 'Bestellnummer: ' : 'Order-ID: '}${orderData.orderNumber}</h3>
                 <p>Email: ${orderData.email}</p>
                 <p>${language === 'de' ? 'Datum: ' : 'Date: '} ${orderData.orderdate} ${language === 'de' ? 'Uhr' : 'o\'clock'}</p>
                 <p>${language === 'de' ? 'Zahlungsmethode: ' : 'Payment method: '} ${orderData.payment}</p>
