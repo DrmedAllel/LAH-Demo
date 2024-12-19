@@ -191,6 +191,26 @@ h2 {
     transition: 0.25s;
 }
 
+.download_button p {
+    display: none;
+}
+
+#wetransfer p {
+    color: #FFF;
+}
+
+.download_button svg {
+    display: block;
+}
+
+.download_button:hover p {
+    display: block;
+}
+
+.download_button:hover svg {
+    display: none;
+}
+
 #paypal {
     background-color: #F2BA36;
 }
