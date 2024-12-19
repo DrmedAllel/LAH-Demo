@@ -59,6 +59,10 @@ h1 {
     .note:last-of-type {
         margin-bottom: 7em;
     }
+
+    #stripe {
+        height: 2em;
+    }
 }
 
 @media (min-width: 1600px) {
@@ -95,6 +99,10 @@ h1 {
 
     .cart {
         max-height: 45vh;
+    }
+
+    #stripe {
+        height: 2px;
     }
 }
 
@@ -312,7 +320,6 @@ h2 {
 
 #stripe {
     width: 100%;
-    height: 2em;
     min-width: 40em;
     background-color: var(--text-color);
     margin-top: 4em;
