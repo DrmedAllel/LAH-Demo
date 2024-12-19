@@ -29,20 +29,20 @@ h1 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-left: 10%;
-        padding-right: 10%;
-        width: 100%;
+        width: auto;
         align-items: center;
         justify-content: center;
         height: auto;
+        width: 80vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
 
     .right-side{
         justify-content: flex-start;
         background-color: var(--card-color);
         height: auto;
-        overflow-y: scroll;
-        width: 100%;
+        overflow-x: hidden;
     }
 
 
@@ -51,16 +51,13 @@ h1 {
         min-width: 40em;
         height: auto;
         overflow-y: scroll;
+        overflow-y: hidden;
         padding-left: 5em;
         padding-right: 5em;
     }
 
     .note:last-of-type {
         margin-bottom: 7em;
-    }
-
-    #stripe {
-        height: 30px;
     }
 }
 
@@ -98,10 +95,6 @@ h1 {
 
     .cart {
         max-height: 45vh;
-    }
-
-    #stripe {
-        height: 3px;
     }
 }
 
@@ -319,6 +312,7 @@ h2 {
 
 #stripe {
     width: 100%;
+    height: 2em;
     min-width: 40em;
     background-color: var(--text-color);
     margin-top: 4em;
