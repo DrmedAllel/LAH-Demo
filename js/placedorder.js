@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <h1 id='thank_you_header'>${language === 'de' ? 'Vielen Dank für Ihre Bestellung!' : 'Thank you for your order!'}</h1>
                                         <p>${language === 'de' ? 'Wir bearbeiten Ihre Bestellung und senden Ihnen eine Rechnung per E-Mail. Bitte haben Sie etwas Geduld.' : 'We are processing your order and will send you an invoice by email. Please be patient.'}</p>
                                         <div id='order_container'></div>
-                                        <button id='back_to_shop' onclick="window.location.href='index.html'">${language === 'de' ? 'Zurück zum Shop' : 'Back to Shop'}</button>
+                                        <button id='back_to_shop' onclick="window.location.href='index.html'">${language === 'de' ? 'Zurück zur Startseite' : 'Back to Homepage'}</button>
                                     `;
 
     loadOrders('#order_container');
