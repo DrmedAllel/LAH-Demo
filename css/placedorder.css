@@ -9,6 +9,11 @@ p {
     margin: 0;
 }
 
+.note {
+    width: 80%;
+    text-align: center;
+}
+
 #order_note {
     text-align: center;
     margin-bottom: 2em;
@@ -32,7 +37,18 @@ p {
     padding: 1em;
     border-radius: 0.7em;
     margin-bottom: 4em;
-    width: min(60em, 60%);
+}
+
+@media (max-width: 1600px) {
+    .order{
+        width: 80%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .order{
+        width: min(60em, 60%);
+    }
 }
 
 .order_header {
