@@ -183,6 +183,7 @@ async function appendMap(orderData) {
             mapElement.innerHTML = 'Karte konnte nicht geladen werden';
         }
     }
+    await new Promise(resolve => setTimeout(resolve, 500));
     hideSpinner();
 }
 
