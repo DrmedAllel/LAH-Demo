@@ -63,6 +63,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
 
                 <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="saveFormData" checked>
+                        <span>${language === 'de' ? 'Formular für den nächsten Einkauf speichern' : 'Save form for next checkout'}</span>
+                    </label>
+                </div>
+
+                <div class="form-group">
                     <button type="submit" class="submit_button button" id="submit">${language === 'de' ? 'Bestellung abschicken' : 'Submit'}</button>
                 </div>
                 <p class="note" id="bottom_note">${language === 'de' ? 'Sollten Sie Fragen zum Bestellprozess haben, treten Sie gerne mit uns in Kontakt.' : 'If you have any questions regarding the order process feel free to get in contact with us.'}</p>
@@ -269,3 +276,65 @@ function deleteOrders() {
     }
 }
 
+
+// Funktion zum Speichern der Form-Daten
+function saveFormData() {
+    if (!document.getElementById('saveFormData').checked) {
+        return;
+    }
+    const formData = {
+        email: document.getElementById('email').value,
+        country: document.getElementById('country').value,
+        firstName: document.getElementById('first_name').value,
+        lastName: document.getElementById('last_name').value,
+        company: document.getElementById('company').value,
+        address: document.getElementById('adress').value,
+        zip: document.getElementById('zip').value,
+        city: document.getElementById('city').value,
+        additionalInfo: document.getElementById('additional_info').value
+    };
+    
+    setLocalStorageItem('savedFormData', formData, 30); // 30 Tage gültig
+}
+
+// Funktion zum Laden der Form-Daten
+function loadFormData() {
+    const savedData = getLocalStorageItem('savedFormData');
+    if (savedData) {
+        document.getElementById('email').value = savedData.email || '';
+        document.getElementById('country').value = savedData.country || '';
+        document.getElementById('first_name').value = savedData.firstName || '';
+        document.getElementById('last_name').value = savedData.lastName || '';
+        document.getElementById('company').value = savedData.company || '';
+        document.getElementById('adress').value = savedData.address || '';
+        document.getElementById('zip').value = savedData.zip || '';
+        document.getElementById('city').value = savedData.city || '';
+        document.getElementById('additional_info').value = savedData.additionalInfo || '';
+    }
+}
+
+// Event Listener für Form Änderungen
+document.addEventListener('DOMContentLoaded', function() {
+    // Form laden wenn vorhanden
+    loadFormData();
+    
+    // Alle Input Felder überwachen
+    const formInputs = document.querySelectorAll('input, textarea');
+    formInputs.forEach(input => {
+        input.addEventListener('change', saveFormData);
+    }); 
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    //if the checkbox get unchecked, delete the saved form data
+    const saveFormCheckbox = document.getElementById('saveFormData');
+    if (saveFormCheckbox) {
+        saveFormCheckbox.addEventListener('change', function() {
+            console.log('Checkbox changed');
+            if (!saveFormCheckbox.checked) {
+                removeLocalStorageItem('savedFormData');
+                console.log('Data removed');
+            }
+        });
+    }
+});
