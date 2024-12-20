@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </button>
                     <button type="button" class="payment_button button" id="bank_transfer" title="BankTransfer" onclick="selectPayment(this)">${language === 'de' ? 'Überweisung' : 'Bank Transfer'}</button>
                 </div>
+                <p class="note">${language === 'de' ?  'Wir bieten die Zahlung per PayPal und Überweisung an. Nach Absenden der Bestellung erhalten Sie eine Rechnung per E-Mail.' : 'We offer payment via PayPal and Bank Transfer. After submitting the order you will receive an invoice by email.'}</p>
 
                 <h2>${language === 'de' ? 'Zusätzliche Informationen' : 'Additional Information'}</h2>
                 <div class="form-group">
