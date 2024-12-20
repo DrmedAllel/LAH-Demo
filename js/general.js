@@ -239,5 +239,16 @@ function hideSpinner() {
   spinner.classList.add('spinner_invisible');
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const spinnerHTML = `
+      <div class="spinner_invisible" id="spinner">
+          <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+      </div>
+  `;
+  
+  document.body.insertAdjacentHTML('beforeend', spinnerHTML);
+
+  const spinner = document.getElementById('spinner');
+});
 
 
