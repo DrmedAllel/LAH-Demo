@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <input type="text" id="city" name="city" placeholder="${language === 'de' ? 'Stadt' : 'City'}" class="standard_input" required>
                 </div>
 
-                <div class="form-group_download">
+                <div class="form-group_download form-group">
                     <h2>Download</h2>
                     <div class="form-group">
                         <button type="button" class="download_button button" id="onedrive" title="Microsoft OneDrive" onclick="selectDownload(this)">
