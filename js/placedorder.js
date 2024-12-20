@@ -169,7 +169,7 @@ async function appendMap(orderData) {
         const infoWindow = new google.maps.InfoWindow({
             content: `
                 <div class="marker">
-                    <p>${language === 'de' ? 'Lieferadress:' : 'Delivery address:'}</p>
+                    <p>${language === 'de' ? 'Lieferadresse:' : 'Delivery address:'}</p>
                     <p>${adress}</p>
                 </div>
             `
