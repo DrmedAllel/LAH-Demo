@@ -191,7 +191,7 @@ h2 {
     transition: 0.25s;
 }
 
-.download_button p {
+.download_button p, #bank_transfer p {
     display: none;
 }
 
@@ -205,19 +205,27 @@ h2 {
 
 .download_button svg {
     display: block;
+    width: 2em;
+    height: 2em;
 }
 
-.download_button:hover p {
+
+#bank_transfer svg {
     display: block;
 }
 
-.download_button:hover svg {
+.download_button:hover svg, #bank_transfer:hover svg {
     display: none;
+}
+
+.download_button:hover p, #bank_transfer:hover p {
+    display: block;
 }
 
 #paypal {
     background-color: #F2BA36;
 }
+
 
 #wetransfer {
     background-color: #2D82E0;
