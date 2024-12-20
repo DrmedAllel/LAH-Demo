@@ -116,24 +116,12 @@ p {
 
 
 #back_to_shop {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     background-color: var(--text-color);
-    border: 2px solid transparent;
     color: var(--background-color);
-    font-size: 1em;
-    font-weight: 700;
     width: auto;
-    height: 3em;
-    border-radius: 0.7em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: 0.25s;
 }
 
 #back_to_shop:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: 0.25s;
+    background-color: var(--background-color);
+    color: var(--text-color);   
 }
