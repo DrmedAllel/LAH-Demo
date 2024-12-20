@@ -51,14 +51,14 @@ function createOrderHTML(orderData, language) {
                 <svg fill="#000000" width="80px" height="80px" viewBox="0 0 24 24" id="check-mark-circle" xmlns="http://www.w3.org/2000/svg" class="icon line"><path id="primary" d="M12,21h0a9,9,0,0,1-9-9H3a9,9,0,0,1,9-9h0a9,9,0,0,1,9,9h0A9,9,0,0,1,12,21ZM8,11.5l3,3,5-5" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;"></path></svg>
                 <div class="order_header_text">
                     <p class="order_id">${language === 'de' ? 'Bestellnummer: ' : 'Order-ID: '}${orderData.orderNumber}</p>
-                    <p class="thank_you">${language === 'de' ? 'Danke ' : 'Thank you '} ${orderData.first_name}!</p>
+                    <p class="thank_you">${language === 'de' ? 'Danke ' : 'Thank you '} ${orderData.first_name} ${orderData.last_name}!</p>
                 </div>
             </div>
             <div class="map_container">
                 <div class="map" id="${map_id}"></div>
                 <div class="map_container_text">
-                    <p class="">${language === 'de' ? 'Wir haben Deine Bestellung erhalten!' : 'We received your order!'}</p>
-                    <p class="">${language === 'de' ? 'Wir melden uns in Kürze bei dir mit der Rechnung.' : 'We will contact you shortly with the invoice.'}</p>
+                    <p class="">${language === 'de' ? 'Wir haben Ihre Bestellung erhalten!' : 'We received your order!'}</p>
+                    <p class="">${language === 'de' ? 'Wir melden uns in Kürze bei Ihnen mit der Rechnung.' : 'We will contact you shortly with the invoice.'}</p>
                 </div>
             </div>
             <p>Email: ${orderData.email}</p>
