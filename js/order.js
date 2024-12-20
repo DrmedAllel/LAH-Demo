@@ -254,6 +254,7 @@ function selectPayment(button) {
         paymentButtons.forEach(button => button.classList.remove('selected_button'));
         button.classList.add('selected_button');
     }
+    saveFormData();
 }
 
 function selectDownload(button) {
@@ -264,6 +265,7 @@ function selectDownload(button) {
         downloadButtons.forEach(button => button.classList.remove('selected_button'));
         button.classList.add('selected_button');
     }
+    saveFormData();
 }
 
 function deleteOrders() {
@@ -291,7 +293,9 @@ function saveFormData() {
         address: document.getElementById('adress').value,
         zip: document.getElementById('zip').value,
         city: document.getElementById('city').value,
-        additionalInfo: document.getElementById('additional_info').value
+        additionalInfo: document.getElementById('additional_info').value,
+        paymentMethod: document.querySelector('.payment_button.selected_button')?.id || '',
+        downloadMethod: document.querySelector('.download_button.selected_button')?.id || ''
     };
     
     setLocalStorageItem('savedFormData', formData, 30); // 30 Tage gültig
@@ -310,6 +314,22 @@ function loadFormData() {
         document.getElementById('zip').value = savedData.zip || '';
         document.getElementById('city').value = savedData.city || '';
         document.getElementById('additional_info').value = savedData.additionalInfo || '';
+
+        // Apply selected_button class to saved payment method
+        if (savedData.paymentMethod) {
+            const paymentButton = document.getElementById(savedData.paymentMethod);
+            if (paymentButton) {
+                paymentButton.classList.add('selected_button');
+            }
+        }
+
+        // Apply selected_button class to saved download method
+        if (savedData.downloadMethod) {
+            const downloadButton = document.getElementById(savedData.downloadMethod);
+            if (downloadButton) {
+                downloadButton.classList.add('selected_button');
+            }
+        }
     }
 }
 
