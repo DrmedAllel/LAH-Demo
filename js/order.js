@@ -77,13 +77,15 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     main.innerHTML = main.innerHTML + formHTML;
 });
-                    
+
+
 
 function sendEmail(data) {
     //get Language Cookie
     const language = getCookie('language');
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycby4Tye_-dBTCHBsU9Utf9mG4S4ArfEaXC-IV30tUn1QwUwYv7HiCzZZ3MQ3u10qvW6Bnw/exec";
+    const key = 'rgnignderignbirdegnbi'
+    const scriptURL = decrypt('GhMaGRRUS0oBChUHEh1cAwoICQ4MXAQBBEgDBQYABhRBEUYzLwMeDQAQRjMXDDhDACcmKi8sETxLMREBVw8uRjRaKBUIIQQqKkonNFpCEDAJXzMeJxA3H1AmDSYIMz1dLzhBEVRXHxQ+RCUAHkgLHAAR', key);
     fetch(scriptURL, {
         redirect: "follow",
         method: "POST",
@@ -102,6 +104,7 @@ function sendEmail(data) {
 
         //Clear the form
         document.getElementById('orderForm').reset();
+        deleteOrders();
         //Save the order element in the local storage as a jason element
         setLocalStorageItem(data.orderNumber, JSON.stringify(data), 7);
         //Clear the cart
@@ -252,6 +255,16 @@ function selectDownload(button) {
     } else {
         downloadButtons.forEach(button => button.classList.remove('selected_button'));
         button.classList.add('selected_button');
+    }
+}
+
+function deleteOrders() {
+    //delete all items from the local storage with an id starting with '#'
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('#')) {
+            localStorage.removeItem(key);
+        }
     }
 }
 

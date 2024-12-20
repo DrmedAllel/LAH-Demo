@@ -79,7 +79,10 @@ function initializeGoogleMapsAPI() {
     if (googleMapsLoadPromise) return googleMapsLoadPromise;
 
     googleMapsLoadPromise = new Promise((resolve, reject) => {
-        const YOUR_API_KEY = 'AIzaSyDjyZCqPbg_f4jf9h6sOXXnPcOZ8Rnq50A';
+        const key = 'ueigniurnvuesng';
+        const YOUR_API_KEY = decrypt('NCwTBj0QMRgXLDYUIwwAKgNdDQhQHUQdOS09HT4EOj9RNQAYQEIv', key);
+
+
         const script = document.createElement('script');
         script.src = `https://maps.googleapis.com/maps/api/js?key=${YOUR_API_KEY}&callback=googleMapsCallback`;
         script.async = true;
