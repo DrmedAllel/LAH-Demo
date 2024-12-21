@@ -299,8 +299,10 @@ h2 {
 
 .ItemImage {
     width: auto;
-    height: 7em;
-    border: 1px solid #000;
+    height: 5.5em;
+    border: 0.15em solid var(--background-color);
+    border-radius: 0.7em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .ItemTitle {
