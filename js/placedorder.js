@@ -45,6 +45,7 @@ function createOrderHTML(orderData, language) {
     const productsHTML = products.map(product => `<p>${product}</p>`).join('');
     
     const map_id = getMapId(orderData.orderNumber);
+    console.log(orderData);
     return `
         <div class="order">
             <div class="order_header">
