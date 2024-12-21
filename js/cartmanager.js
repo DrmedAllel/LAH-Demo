@@ -139,7 +139,7 @@ function loadCart() {
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
             <div class="ItemRow cart-item-row">
-                <img src="${item.image}" alt="${item.name}" class="ItemImage">
+                <img src="${item.image}" alt="" class="ItemImage">
                 <div class="ItemColumn">
                     <div class="ItemRow">
                         <h3 class="ItemTitle">${item.name}</h3>
