@@ -15,8 +15,6 @@ setInterval(async function() {
     let newRandomNumber;
     const currentNumber = parseInt(flugzeugImg.src.match(/\d+(?=\.png$)/)[0]);
     
-    
-
     do {
         newRandomNumber = Math.floor(Math.random() * NUMBER_OF_IMAGES) + 1;
     } while (newRandomNumber === currentNumber);
