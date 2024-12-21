@@ -96,25 +96,30 @@ window.onload = function() {
     loadCart();
 }
 
-function loadCart() {
-    //Ge the Language Cookie
-    const language = getCookie('language');
-
-    console.log('Loading cart...');
-    // Get all items from localStorage beginning with LAH- and add them to a list
-    const cartItems = [];
+function getCart() {
+    const cart = [];
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key.startsWith('LAH-')) {
             try {
                 getLocalStorageItem(key);
-                cartItems.push(JSON.parse(getLocalStorageItem(key)));
+                cart.push(JSON.parse(getLocalStorageItem(key)));
             } catch (e) {
                 console.error('Error parsing JSON from localStorage:', e);
                 console.error('Key:', key);
             }
         }
     }
+    return cart;
+}
+
+function loadCart() {
+    //Ge the Language Cookie
+    const language = getCookie('language');
+
+    console.log('Loading cart...');
+    // Get all items from localStorage beginning with LAH- and add them to a list
+    const cartItems = getCart();
 
     // Get all cart elements
     const carts = document.getElementsByClassName('cart');
@@ -177,18 +182,6 @@ function loadCart() {
         totalPriceElement.innerHTML = `${language === 'de' ? 'Summe:' : 'Total:'} ${getTotalPrice()}`;
     }
 }
-
-
-window.addEventListener('scroll', function() {
-    const shoppingCart = document.querySelector('.shopping_cart');
-    if (shoppingCart) {
-        if (window.scrollY >= 100) {
-            shoppingCart.style.display = 'flex';
-        } else {
-            shoppingCart.style.display = 'none';
-        }
-    }
-});
 
 document.addEventListener('change', function(event) {
     // get Language Cookie

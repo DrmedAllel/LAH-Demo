@@ -41,10 +41,41 @@ document.addEventListener('DOMContentLoaded', function() {
     cartDiv.className = 'shopping_cart';
     cartDiv.innerHTML = `
         <a href="../warenkorb.html" title="Warenkorb">
+            <p class="cart_count"></p>
             <img src="../images/shopping-cart.png" alt="Shopping Cart" class="shopping_cart_icon cart_link">
         </a>
     `;
     mainSection.appendChild(cartDiv);
+    updateCartLink();
+});
+
+
+function updateCartLink() {
+    let CountInCart = getCart().length;
+    const cartCount = document.querySelector('.cart_count');
+    if (cartCount) {
+        cartCount.innerHTML = CountInCart;
+    }
+
+}
+
+document.addEventListener('click', function() {
+    updateCartLink();
+    console.log('click');
+});
+
+
+
+
+window.addEventListener('scroll', function() {
+    const shoppingCart = document.querySelector('.shopping_cart');
+    if (shoppingCart) {
+        if (window.scrollY >= 100) {
+            shoppingCart.style.display = 'flex';
+        } else {
+            shoppingCart.style.display = 'none';
+        }
+    }
 });
 
 

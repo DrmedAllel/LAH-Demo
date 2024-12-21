@@ -174,10 +174,28 @@ main {
     justify-content: center;
     gap: 1em;
     margin-bottom: 5em;
+    padding: 0.5em;
 }
 
 .shopping_cart img{
     width: auto;
     height: 4em;
     padding: 1em;
+}
+
+.cart_count {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--cancel-color);
+    color: var(--text-color);
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2em;
+    height: 2em;
+    z-index: 1;
 }
