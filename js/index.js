@@ -12,17 +12,19 @@ window.addEventListener('load', function() {
 
 setInterval(async function() {
     const flugzeugImg = document.getElementById('flugzeug_img');
-    let newRandomNumber;
+    let newNumber;
     const currentNumber = parseInt(flugzeugImg.src.match(/\d+(?=\.png$)/)[0]);
     
-    do {
-        newRandomNumber = Math.floor(Math.random() * NUMBER_OF_IMAGES) + 1;
-    } while (newRandomNumber === currentNumber);
+    if (currentNumber === NUMBER_OF_IMAGES) {
+        newNumber = 1;
+    } else {
+        newNumber = currentNumber + 1;
+    }
     
     fadeOut(flugzeugImg, 500);
     
     setTimeout(async () => {
-        flugzeugImg.src = `images/landing_page/landing_page${newRandomNumber}.png`;
+        flugzeugImg.src = `images/landing_page/landing_page${newNumber}.png`;
         await new Promise(resolve => setTimeout(resolve, 125));
         fadeIn(flugzeugImg, 500);
     }, 1000);
