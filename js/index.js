@@ -6,7 +6,7 @@ window.addEventListener('load', function() {
     const randomNumber = Math.floor(Math.random() * NUMBER_OF_IMAGES) + 1;
     console.log(randomNumber); // For testing purposes
     flugzeugImg.src = `images/landing_page/landing_page${randomNumber}.png`;
-    fadeIn(flugzeugImg, 1000);
+    fadeIn(flugzeugImg, 500);
 });
 
 
@@ -21,11 +21,11 @@ setInterval(async function() {
         newRandomNumber = Math.floor(Math.random() * NUMBER_OF_IMAGES) + 1;
     } while (newRandomNumber === currentNumber);
     
-    fadeOut(flugzeugImg, 1000);
+    fadeOut(flugzeugImg, 500);
     
     setTimeout(async () => {
         flugzeugImg.src = `images/landing_page/landing_page${newRandomNumber}.png`;
-        await new Promise(resolve => setTimeout(resolve, 750));
+        await new Promise(resolve => setTimeout(resolve, 125));
         fadeIn(flugzeugImg, 500);
     }, 1000);
 }, 10000);
