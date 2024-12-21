@@ -51,33 +51,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function updateCartLink() {
+    //change the number of items in the cart link
     let CountInCart = getCart().length;
     const cartCount = document.querySelector('.cart_count');
     if (cartCount) {
         cartCount.innerHTML = CountInCart;
     }
-
 }
 
 document.addEventListener('click', function() {
+    //every time the user clicks on the page update the cart link
     updateCartLink();
-    console.log('click');
 });
-
-
-
-
-window.addEventListener('scroll', function() {
-    const shoppingCart = document.querySelector('.shopping_cart');
-    if (shoppingCart) {
-        if (window.scrollY >= 100) {
-            shoppingCart.style.display = 'flex';
-        } else {
-            shoppingCart.style.display = 'none';
-        }
-    }
-});
-
 
 window.onload = function () {
     //get all .item elements
