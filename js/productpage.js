@@ -35,6 +35,16 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>${language === 'de' ? 'Bestellungen über die Website oder über Mail möglich:' : 'Orders possible via the website or by mail:'} <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
         `;
     }
+
+    const mainSection = document.querySelector('main');
+    const cartDiv = document.createElement('div');
+    cartDiv.className = 'shopping_cart';
+    cartDiv.innerHTML = `
+        <a href="../warenkorb.html" title="Warenkorb">
+            <img src="../images/shopping-cart.png" alt="Shopping Cart" class="shopping_cart_icon cart_link">
+        </a>
+    `;
+    mainSection.appendChild(cartDiv);
 });
 
 
