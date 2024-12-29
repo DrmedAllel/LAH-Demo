@@ -30,6 +30,12 @@ async function loadOrders(identifier) {
     const elementToPaste = document.querySelector(identifier);
     const ListOfOrders = getItemsWithHashFromLocalStorage();
 
+    if (Object.keys(ListOfOrders).length === 0) {
+        alert(language === 'de' ? 'Keine Bestellungen gefunden' : 'No orders found');
+        window.location.href = 'index.html';
+        return;
+    }
+
     for (let order in ListOfOrders) {
         let orderData = JSON.parse(ListOfOrders[order]);
         orderData = JSON.parse(orderData.value);
