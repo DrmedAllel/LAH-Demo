@@ -87,22 +87,21 @@ document.addEventListener('DOMContentLoaded', function() {
   // add the language selection to the page
   const main = document.querySelector('main');
   if (main) {
-      if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('/warenkorb.html')|| window.location.pathname.endsWith('/about.html') || window.location.pathname.endsWith('/agb.html') || window.location.pathname.endsWith('/impressum.html') || window.location.pathname.endsWith('/placedorder.html') || !window.location.pathname.endsWith('/links.html')) {
+      if (window.location.href.includes('LAH-Demo')) {
         main.innerHTML = `
         <div id="language_selection">
-          <img src="images/language_selection/germany.png" alt="Germany Flag" id="germany_flag" class="flag flag_active" title="Seite auf Deutsch">
-          <img src="images/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="Page in English">
+          <img src="/LAH-Demo/images/language_selection/germany.png" alt="Germany Flag" id="germany_flag" class="flag flag_active" title="Seite auf Deutsch">
+          <img src="/LAH-Demo/images/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="Page in English">
         </div>
         ` + main.innerHTML;
-        console.log(window.location.pathname);
       } else {
         main.innerHTML = `
         <div id="language_selection">
-          <img src="../images/language_selection/germany.png" alt="Germany Flag" id="germany_flag" class="flag flag_active" title="Seite auf Deutsch">
-          <img src="../images/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="Page in English">
+          <img src="/images/language_selection/germany.png" alt="Germany Flag" id="germany_flag" class="flag flag_active" title="Seite auf Deutsch">
+          <img src="/images/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="Page in English">
         </div>
         ` + main.innerHTML;
-        console.log(window.location.pathname + ' else'); 
+        console.log('Local Test'); 
       }
   }
 });
