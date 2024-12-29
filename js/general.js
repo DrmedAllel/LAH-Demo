@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (footer) {
       const language = getCookie('language');
       footer.innerHTML = `
-    <p>Luftfahrt-Archiv Hafner, Udo Hafner, ${language === 'de' ? 'gegr. 1990' : 'est. 1990'}</p>
+    <p>Luftfahrt-Archiv Hafner, Udo Hafner, 1990 - ${new Date().getFullYear()}</p>
     <a href="/LAH-Demo/agb.html">${language === 'de' ? 'AGB' : 'Terms'}</a> 
     <a href="/LAH-Demo/links.html">${language === 'de' ? 'Links' : 'Links'}</a> 
     <a href="/LAH-Demo/about.html">${language === 'de' ? 'Wir über uns' : 'About Us'}</a>
