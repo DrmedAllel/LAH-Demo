@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <img src="images/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="Page in English">
         </div>
         ` + main.innerHTML;
+        console.log(window.location.pathname);
       } else {
         main.innerHTML = `
         <div id="language_selection">
@@ -101,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <img src="../images/language_selection/uk.png" alt="UK Flag" id="uk_flag" class="flag" title="Page in English">
         </div>
         ` + main.innerHTML;
+        console.log(window.location.pathname + ' else'); 
       }
   }
 });
