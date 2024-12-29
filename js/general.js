@@ -1,11 +1,3 @@
-document.addEventListener('load', function() {
-  showSpinner();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  hideSpinner();
-});
-
 document.addEventListener('DOMContentLoaded', function() {
   // add navigation to the header
   const header = document.querySelector('header');
