@@ -109,7 +109,7 @@ p {
     margin: 1em;
 }
 
-.map_container_text p:first-of-type {
+.headline {
     font-weight: bold;
     font-size: 1.5em;
     font-weight: 500;
@@ -163,4 +163,22 @@ p {
 #back_to_shop:hover {
     background-color: var(--background-color);
     color: var(--text-color);   
+}
+
+
+.order_data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    border-radius: 0.7em;
+    border: 1px solid var(--card-color);
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.order_note, .order_note * {
+    text-decoration: none;
+    color: var(--text-color);
 }

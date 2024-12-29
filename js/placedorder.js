@@ -58,18 +58,26 @@ function createOrderHTML(orderData, language) {
             <div class="map_container">
                 <div class="map" id="${map_id}"></div>
                 <div class="map_container_text">
-                    <p class="">${language === 'de' ? 'Wir haben Ihre Bestellung erhalten!' : 'We received your order!'}</p>
-                    <p class="">${language === 'de' ? 'Wir melden uns in Kürze bei Ihnen mit der Rechnung.' : 'We will contact you shortly with the invoice.'}</p>
+                    <p class="headline">${language === 'de' ? 'Wir haben Ihre Bestellung erhalten!' : 'We received your order!'}</p>
+                    <p class="">${language === 'de' ? 'Wir melden uns in Kürze bei Ihnen mit der zu bezahlenden Rechnung.' : 'We will contact you shortly with the invoice to be paid.'}</p>
                 </div>
             </div>
-            <p>Email: ${orderData.email}</p>
-            <p>${language === 'de' ? 'Datum: ' : 'Date: '} ${orderData.orderdate} ${language === 'de' ? 'Uhr' : 'o\'clock'}</p>
-            <p>${language === 'de' ? 'Zahlungsmethode: ' : 'Payment method: '} ${orderData.payment}</p>
-            <p>${language === 'de' ? 'Download-Methode: ' : 'Download method: '} ${orderData.download}</p>
-            <p>${language === 'de' ? 'Bestellung: ' : 'Order: '}</p>
-            <div class="products">
-                ${productsHTML}
+            <div class="order_data">
+                <p class="headline">${language === 'de' ? 'Bestellinformationen:' : 'Order information:'}</p>
+                </br>
+                <p>${language === 'de' ? 'Datum: ' : 'Date: '} ${orderData.orderdate} ${language === 'de' ? 'Uhr' : 'o\'clock'}</p>
+                <p>Email: ${orderData.email}</p>
+                <p>${language === 'de' ? 'Zahlungsmethode: ' : 'Payment method: '} ${orderData.payment}</p>
+                <p>${language === 'de' ? 'Download-Methode: ' : 'Download method: '} ${orderData.download}</p>
+                </br>
+                </br>
+                <p>${language === 'de' ? 'Bestellung: ' : 'Order: '}</p>
+                </br>
+                <div class="products">
+                    ${productsHTML}
+                </div>
             </div>
+            <p class="order_note">${language === 'de' ? 'Wenn Sie Fragen zu Ihrer Bestellung haben, kontaktieren Sie uns bitte unter:' : 'If you have any questions about your order, please contact us at:'} <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
         </div>
     `;
 }
