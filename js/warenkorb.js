@@ -104,7 +104,7 @@ function sendEmail(data) {
             "Content-Type": "text/plain;charset=utf-8",
         },
         body: JSON.stringify({
-            to: "claudius.caspar.laur@gmail.com",
+            to: "claudius.caspar.laur@gmail.com, u.e.hafner@t-online.de",
             subject: "Neue Bestellung " + data.orderNumber,
             message: generateMessage(data),
         })
