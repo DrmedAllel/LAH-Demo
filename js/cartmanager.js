@@ -114,7 +114,7 @@ function getCart() {
 }
 
 function loadCart() {
-    //Ge the Language Cookie
+    //Get the Language Cookie
     const language = getCookie('language');
 
     console.log('Loading cart...');
@@ -133,6 +133,9 @@ function loadCart() {
     });
 
     Array.from(carts).forEach(cart => {
+        //Get the Language Cookie
+        const language = getCookie('language');
+
         // Add each item to the cart
         for (let item of cartItems) {
             const cartItem = document.createElement('div');
@@ -146,7 +149,7 @@ function loadCart() {
                         <select class="item-options">
                             <option value="download">Download</option>
                             <option value="dvd">DVD</option>
-                            <option value="book">Book</option>
+                            <option value="book">${language === 'de' ? 'Buch' : 'Book'}</option>    
                         </select>
                     </div>
                     <div class="ItemRow">
