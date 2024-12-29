@@ -1,3 +1,11 @@
+document.addEventListener('load', function() {
+  showSpinner();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  hideSpinner();
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   // add navigation to the header
   const header = document.querySelector('header');
@@ -76,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
       footer.innerHTML = `
     <p>Luftfahrt-Archiv Hafner, Udo Hafner, 1990 - ${new Date().getFullYear()}</p>
     <a href="/LAH-Demo/agb.html">${language === 'de' ? 'AGB' : 'Terms'}</a> 
-    <a href="/LAH-Demo/links.html">${language === 'de' ? 'Links' : 'Links'}</a> 
+    <a href="/LAH-Demo/links.html">Links</a> 
     <a href="/LAH-Demo/about.html">${language === 'de' ? 'Wir über uns' : 'About Us'}</a>
     <a href="/LAH-Demo/impressum.html">${language === 'de' ? 'Impressum' : 'Imprint'}</a>
       `;
