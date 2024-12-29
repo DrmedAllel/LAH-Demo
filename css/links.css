@@ -3,12 +3,26 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: min(60em, 60%);
 }
 
 main section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: auto;
+    gap: 1em;
+}
+
+section img {
+    cursor: pointer;
+}
+
+.haftungshinweis {
+    margin-top: 8em;
+    font-size: 0.5em;
+    text-align: center;
+    color: var(--text-color);
     width: min(60em, 60%);
 }
 

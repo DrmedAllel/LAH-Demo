@@ -71,3 +71,4 @@ window.addEventListener('DOMContentLoaded', function() {
         <p>Tel +49 (0)7141 / 90 16 03</p>
     ` + mainSection.innerHTML;
 });
+
