@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // add the language selection to the page
   const main = document.querySelector('main');
   if (main) {
-      if (window.location.href.includes('LAH-Demo')) {
+      if (window.location.href.includes('127.0.0.1:3000')) {
         main.innerHTML = `
         <div id="language_selection">
           <img src="/LAH-Demo/images/language_selection/germany.png" alt="Germany Flag" id="germany_flag" class="flag flag_active" title="Seite auf Deutsch">
