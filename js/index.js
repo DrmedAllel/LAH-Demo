@@ -1,4 +1,4 @@
-const NUMBER_OF_IMAGES = 4;
+const NUMBER_OF_IMAGES = 5;
 
 window.addEventListener('load', function() {
     const flugzeugImg = document.getElementById('flugzeug_img');
