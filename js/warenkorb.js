@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 function sendEmail(data) {
     //get Language Cookie
     const language = getCookie('language');
