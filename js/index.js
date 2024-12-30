@@ -28,7 +28,7 @@ setInterval(async function() {
         await new Promise(resolve => setTimeout(resolve, 125));
         fadeIn(flugzeugImg, 500);
     }, 1000);
-}, 10000);
+}, 5000);
 
 function fadeOut(element, duration) {
     element.style.opacity = 1;
