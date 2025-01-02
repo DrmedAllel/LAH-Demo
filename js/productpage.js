@@ -78,8 +78,12 @@ window.onload = function () {
         
         // Check if the item_image element exists
         const itemImageElement = item.getElementsByClassName('image_item')[0];
-        const ItemImage = itemImageElement ? itemImageElement.src : '';
+        // Check if there exists an image element with the class itemThumbnail
+        const itemThumbnailElement = item.getElementsByClassName('itemThumbnail')[0];
+        // If there is an itemThumbnail image, use that, otherwise use the item_image
+        const ItemImage = itemThumbnailElement ? itemThumbnailElement.src : itemImageElement.src;
 
+        
         const button = document.createElement('button');
         button.className = 'add-to-cart';
         button.id = ItemID;
