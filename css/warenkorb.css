@@ -17,7 +17,7 @@ h1 {
 }
 
 
-@media (max-width: 1300px) {
+@media (max-width: 1530px) {
     #orderForm {
         display: flex;
         flex-direction: column-reverse;
@@ -59,7 +59,7 @@ h1 {
     }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1530px) {
     #orderForm {
         display: flex;
         flex-direction: row;
