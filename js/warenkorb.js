@@ -119,7 +119,7 @@ function sendEmail(data) {
         clearCart();
 
         //Redirect to the order confirmation page
-        window.location.href = '/Shop-LAH/placedorder.html';
+        window.location.href = '/placedorder.html';
     })
     .catch(error => {
         console.error("Fehler beim Senden der E-Mail:", error);
