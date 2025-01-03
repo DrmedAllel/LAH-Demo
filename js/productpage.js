@@ -32,7 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="order_info_row">
                 <p><img src="../images/buch.png" alt="${language === 'de' ? 'Buch-Reproduktion' : 'Book reproduction'}" class="order_info_img"> ${language === 'de' ? 'Buch-Reproduktion auf Anfrage:' : 'Book reproduction on request:'} <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
             </div>
+            <div class="order_info_row">
             <p>${language === 'de' ? 'Bestellungen über die Website oder über Mail möglich:' : 'Orders possible via the website or by mail:'} <a href="mailto:info@luftfahrt-archiv-hafner.de">info@luftfahrt-archiv-hafner.de</a></p>
+            </div>
         `;
     }
 

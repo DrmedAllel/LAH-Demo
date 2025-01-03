@@ -29,6 +29,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.25em;
+    font-size: 1em;
 }
 
 .order_info_img {
