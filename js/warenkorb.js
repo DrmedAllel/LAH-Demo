@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <input type="text" id="company" name="company" placeholder="${language === 'de' ? 'Firma (optional)' : 'Company (optional)'}" class="standard_input">
                 </div>
                 <div class="form-group">
-                    <input type="text" id="adress" name="adress" placeholder="${language === 'de' ? 'Adresse' : 'Address'}" class="standard_input" required>
+                    <input type="text" id="adress" name="adress" placeholder="${language === 'de' ? 'Straße, Hausnummer' : 'Street, House number'}" class="standard_input" required>
                 </div>
                 <div class="form-group">
                     <input type="text" id="zip" name="zip" placeholder="${language === 'de' ? 'PLZ' : 'ZIP'}" class="standard_input" required>
