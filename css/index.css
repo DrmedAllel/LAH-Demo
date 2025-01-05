@@ -5,14 +5,14 @@ main {
 }
 
 #logo {
-    margin-top: 5em;
-    width: 7em;
+    margin-top: 2em;
+    width: min(7em, 5vw);
     height: auto;
 }
 
 #flugzeug_img {
     margin-top: 2em;
-    width: min(70em, 50vw);
+    width: min(70em, 35vw);
     height: auto;
 }
 
