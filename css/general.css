@@ -76,6 +76,7 @@ header h1 a {
     text-decoration: none;
     color: var(--text-color);
     padding: 0;
+    text-align: center;
 }
 
 header p {

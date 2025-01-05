@@ -2,6 +2,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 80vh;
 }
 
 #logo {
@@ -13,6 +14,7 @@ main {
 #flugzeug_img {
     margin-top: 2em;
     width: min(70em, 35vw);
+    min-width: 20em;
     height: auto;
 }
 
