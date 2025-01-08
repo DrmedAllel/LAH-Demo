@@ -30,6 +30,7 @@ main {
     justify-content: center;
     gap: 0.25em;
     font-size: 1em;
+    text-align: center;
 }
 
 .order_info_img {
