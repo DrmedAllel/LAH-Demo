@@ -62,10 +62,10 @@ body{
         justify-content: center;
         top: 2.5%;
         left: min(4em,4vw);
-        width: 5em;
-        height: 5em;
-        font-size: 1em;
-        rotate: 90deg;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2em;
+        padding: 0;
         z-index: 2;
         cursor: pointer;
         background-color: var(--background-color);
@@ -75,7 +75,20 @@ body{
         -moz-user-select: none;
         -ms-user-select: none;
         border: 1px solid var(--card-color);
-        box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu_button div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.25s;
+        rotate: 90deg;
+    }
+
+    .menu_button:hover div {
+        rotate: 270deg;
+        transition: 0.25s;
     }
 
     header {
@@ -133,6 +146,12 @@ body{
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
+        padding-left: auto;
+        padding-right: auto;
+    }
+
+    .title:hover {
+        text-decoration: underline;
     }
 
     nav .dropdown:last-child {

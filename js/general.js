@@ -114,7 +114,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function mobileMenu() {
   const main = document.querySelector('main');
   main.innerHTML = `
-  <div id="menu_button" class="menu_button" onclick="showMobileMenu()">|||</div>
+  <div id="menu_button" class="menu_button" onclick="showMobileMenu()">
+    <div>|||</div>
+  </div>
   ` + main.innerHTML;
   mobileMenuSubmenuEventlistener();
 }
@@ -133,11 +135,9 @@ function mobileMenuSubmenuEventlistener() {
 
 function showMobileMenu() {
   const header = document.querySelector('header');
-  const menu_button = document.getElementById('menu_button');
 
   header.classList.toggle('header_visible');
   console.log('header_visible');
-  menu_button.innerHTML = menu_button.innerHTML === '|||' ? '×' : '|||';
 }
 
 
