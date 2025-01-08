@@ -86,11 +86,6 @@ body{
         rotate: 90deg;
     }
 
-    .menu_button:hover div {
-        rotate: 270deg;
-        transition: 0.25s;
-    }
-
     header {
         display: none;
         flex-direction: column;

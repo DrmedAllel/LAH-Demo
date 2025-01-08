@@ -115,7 +115,7 @@ function mobileMenu() {
   const main = document.querySelector('main');
   main.innerHTML = `
   <div id="menu_button" class="menu_button" onclick="showMobileMenu()">
-    <div>|||</div>
+    <div id="menu_button_div">|||</div>
   </div>
   ` + main.innerHTML;
   mobileMenuSubmenuEventlistener();
@@ -135,9 +135,16 @@ function mobileMenuSubmenuEventlistener() {
 
 function showMobileMenu() {
   const header = document.querySelector('header');
+  const menuButtonDiv = document.querySelector('#menu_button_div');
 
   header.classList.toggle('header_visible');
-  console.log('header_visible');
+  
+
+  const currentRotation = parseInt(menuButtonDiv.getAttribute('data-rotation') || '0');
+  const newRotation = currentRotation + 90;
+  menuButtonDiv.style.transform = `rotate(${newRotation}deg)`;
+  menuButtonDiv.setAttribute('data-rotation', newRotation);
+
 }
 
 
