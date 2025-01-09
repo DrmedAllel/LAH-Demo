@@ -17,7 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <h2>${language === 'de' ? 'Technische Verantwortung' : 'Technical Responsibility'}</h2>
             <p>Claudius Laur<br>
-            Email: <a href="mailto:business@claudiuslaur.de">business@claudiuslaur.de</a></p>
+            Email: <a href="mailto:business@claudiuslaur.de">business@claudiuslaur.de</a><br>
+            Website: <a href="https://claudiuslaur.de">claudiuslaur.de</a></p>
+            </p>
+            
         </section>
     ` + mainSection.innerHTML;
 });
