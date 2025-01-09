@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+  const link = document.createElement('link');
+  link.rel = 'icon';
+  link.href = '/images/favicon.png';
+  document.head.appendChild(link);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
   // add navigation to the header
   const header = document.querySelector('header');
   if (header) {
