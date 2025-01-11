@@ -269,25 +269,31 @@ function getTotalPrice() {
 
     let bookString = '';
     let totalPrice = 0;
+    let book = false;
+    let shippingcost = false;
     for (let item of cartItems) {
-        if (item.type !== 'book') {
+        if (item.type !== 'book' || book) {
             totalPrice += parseFloat(item.price);
         } else {
+            book = true;
             totalPrice += 0;
             if (language === 'de') {
-            bookString = ' + Preis der Bücher';
+                bookString += ' + Preis der Bücher';
             } else {
-            bookString = '+ Price of the books';
+                bookString += '+ Price of the books';
             }
         }
 
-        if (item.type === 'dvd') {
+        if (item.type === 'dvd' && !shippingcost) {
+            shippingcost = true;
             if (language === 'de') {
-            bookString += ' + Versandkosten für DVDs';
+                bookString += ' + Versandkosten der DVDs';
             } else {
-            bookString += ' + Shipping costs for DVDs';
+                bookString += '+ Shipping costs of the DVDs';
             }
         }
+
+
     }
     return `${totalPrice.toFixed(2)} € ${bookString}`;
 }
