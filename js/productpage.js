@@ -22,9 +22,9 @@ async function loadButtons () {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    const language = getCookie('language');
     const order_info = document.getElementById('order_info');
     if (order_info) {
-        const language = getCookie('language');
         order_info.innerHTML = `
             <div class="order_info_row">
                 <p>${language === 'de' ? 'Alle Dateien werden als' : 'All files are offered as'} <img src="../images/dvd.jpg" alt="DVD" class="order_info_img"> DVD ${language === 'de' ? 'oder zum' : 'or for'} <img src="../images/download.png" alt="Download" class="order_info_img"> ${language === 'de' ? 'Download angeboten.' : 'download.'}</p>
@@ -49,8 +49,30 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     mainSection.appendChild(cartDiv);
     updateCartLink();
+    const firstItem = document.querySelector('.item');
+    if (firstItem) {
+        const table_of_contents = document.createElement('div');
+        table_of_contents.className = 'table_of_contents';
+        table_of_contents.innerHTML = `
+            <h2>${language === 'de' ? 'Quicklinks' : 'Quicklinks'}</h2>
+            <ul class="toc">
+            </ul>
+        `;
+        mainSection.insertBefore(table_of_contents, firstItem);
+        generateTableOfContents();
+    }
 });
 
+function generateTableOfContents() {
+    const toc = document.querySelector('.toc');
+    const itemTitles = document.querySelectorAll('.item_title');
+    itemTitles.forEach((title, index) => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<a href="#item-${index}">${title.innerText}</a>`;
+        toc.appendChild(listItem);
+        title.setAttribute('id', `item-${index}`);
+    });
+}
 
 function updateCartLink() {
     //change the number of items in the cart link

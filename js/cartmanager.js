@@ -275,11 +275,18 @@ function getTotalPrice() {
         } else {
             totalPrice += 0;
             if (language === 'de') {
-                bookString = ' + Preis der Bücher';
+            bookString = ' + Preis der Bücher';
             } else {
-                bookString = '+ Price of the books';
+            bookString = '+ Price of the books';
             }
-            
+        }
+
+        if (item.type === 'dvd') {
+            if (language === 'de') {
+            bookString += ' + Versandkosten für DVDs';
+            } else {
+            bookString += ' + Shipping costs for DVDs';
+            }
         }
     }
     return `${totalPrice.toFixed(2)} € ${bookString}`;
