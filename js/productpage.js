@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const table_of_contents = document.createElement('div');
         table_of_contents.className = 'table_of_contents';
         table_of_contents.innerHTML = `
-            <h2>${language === 'de' ? 'Quicklinks' : 'Quicklinks'}</h2>
+            <h2>Quicklinks</h2>
             <ul class="toc">
             </ul>
         `;
