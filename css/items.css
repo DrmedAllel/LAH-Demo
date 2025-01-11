@@ -67,6 +67,7 @@ main {
     height: min(10em, 15vw);
     transition: 0.25s;
     border: 1px solid #000;
+    margin-bottom: 4em;
 }
 
 .table_of_contents{
@@ -78,7 +79,7 @@ main {
 }
 
 .table_of_contents h2{
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 0;
