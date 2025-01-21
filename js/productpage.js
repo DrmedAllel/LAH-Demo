@@ -91,15 +91,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const firstItem = document.querySelector('.item');
     if (firstItem) {
-        const table_of_contents = document.createElement('div');
-        table_of_contents.className = 'table_of_contents';
-        table_of_contents.innerHTML = `
-            <h2>Quicklinks</h2>
-            <ul class="toc">
-            </ul>
-        `;
-        mainSection.insertBefore(table_of_contents, firstItem);
-        generateTableOfContents();
+        const itemTitles = document.querySelectorAll('.item_title');
+        if (itemTitles.length > 2) {
+            const table_of_contents = document.createElement('div');
+            table_of_contents.className = 'table_of_contents';
+            table_of_contents.innerHTML = `
+                <h2>Quicklinks</h2>
+                <ul class="toc">
+                </ul>
+            `;
+            mainSection.insertBefore(table_of_contents, firstItem);
+            generateTableOfContents();
+        }
     }
 });
 
