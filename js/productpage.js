@@ -47,7 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const closeOrderInfo = document.getElementById('close_order_info');
         const orderInfoBackground = document.getElementsByClassName('order_info_background')[0];
 
-        const hideOrderInfo = () => orderInfo.style.display = 'none';
+        const hideOrderInfo = () => {
+            orderInfo.style.display = 'none';
+            unfreeze();
+        };
 
         if (closeOrderInfo) closeOrderInfo.addEventListener('click', hideOrderInfo);
         if (orderInfoBackground) orderInfoBackground.addEventListener('click', hideOrderInfo);
@@ -81,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const orderInfo = document.getElementById('order_info');
             if (orderInfo) {
                 orderInfo.style.display = 'flex';
+                freeze();
             }
         });
     }

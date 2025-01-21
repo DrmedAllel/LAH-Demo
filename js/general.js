@@ -322,3 +322,17 @@ function decrypt(encoded, key) {
 
 
 
+function freeze() {
+  var top= window.scrollY;
+
+  document.body.style.overflow= 'hidden';
+
+  window.onscroll= function() {
+    window.scroll(0, top);
+  }
+}
+
+function unfreeze() {
+  document.body.style.overflow= '';
+  window.onscroll= null;
+}
