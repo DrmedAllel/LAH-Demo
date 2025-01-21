@@ -27,7 +27,7 @@ section img {
 }
 
 
-a {
+main a {
     text-decoration: none;
     color: var(--card-color);
     font-size: 1em;
