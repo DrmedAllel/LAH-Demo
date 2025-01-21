@@ -295,8 +295,6 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
   
   document.body.insertAdjacentHTML('beforeend', spinnerHTML);
-
-  const spinner = document.getElementById('spinner');
 });
 
 
