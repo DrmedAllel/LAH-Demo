@@ -61,9 +61,9 @@ body{
         align-items: center;
         justify-content: center;
         top: 2.5%;
-        left: min(4em,4vw);
-        width: 4rem;
-        height: 4rem;
+        left: 7.5%;
+        width: 5rem;
+        height: 5rem;
         font-size: 2em;
         padding: 0;
         z-index: 2;
