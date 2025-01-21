@@ -33,7 +33,7 @@ main a {
     font-size: 1em;
 }
 
-a:hover {
+main a:hover {
     color: var(--text-color);
     text-decoration: underline;
 }
