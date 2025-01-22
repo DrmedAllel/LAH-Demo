@@ -278,9 +278,9 @@ function getTotalPrice() {
             book = true;
             totalPrice += 0;
             if (language === 'de') {
-                bookString += ' + Preis der Bücher';
+                bookString += ' + Preis der Bücher auf Anfrage';
             } else {
-                bookString += '+ Price of the books';
+                bookString += '+ Price of the books on request';
             }
         }
 
