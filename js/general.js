@@ -213,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
           }
       });
+      setCookie('language', 'en', 365);
   }
 });
 
