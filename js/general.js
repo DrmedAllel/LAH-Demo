@@ -204,7 +204,8 @@ document.addEventListener('DOMContentLoaded', function() {
       //with the next click on the page add the acceptCookies cookie
       document.addEventListener('click', function() {
           setCookie('acceptCookies', 'true', 365);
-          setCookie('language', 'en', 365);
+          setCookie('language', 'de', 365);
+          location.reload();
           const banner = document.querySelector('.cookie-banner');
           if (banner) {
             banner.style.transform = 'translateY(100%)';
@@ -213,7 +214,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
           }
       });
-      setCookie('language', 'de', 365);
   }
 });
 
